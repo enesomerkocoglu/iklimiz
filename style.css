@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --arka-plan-rengi:#F4F1EB ;
+    --birincil-renk:#0D4C3C ;
+    --ikincil-renk:#1A1A2E ;
+    --üçüncül-renk:#DAA520 ;
+    --metin-rengi:#2C3E50 ;
+}
+html,body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: var(--arka-plan-rengi);
+    font-size: 62.5%;
+}
+header{
+    height: 8rem;
+    width: 100%;
+    background-color: var(--birincil-renk);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 8rem;
+}
