@@ -15,6 +15,7 @@ html,body{
     background-color: var(--arka-plan-rengi);
     font-size: 62.5%;
 }
+/*header başlangıç*/
 header{
     height: 8rem;
     width: 100%;
@@ -22,5 +23,156 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 8rem;
+    padding: 0 7rem;
+    position: sticky;
+    top: 0;
 }
+.logo{
+    color: var(--arka-plan-rengi);
+    font-size: 3rem;
+    font-weight: 700;
+}
+.headerul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 10rem;
+}
+.headerul li{
+    font-size: 2rem;
+    
+}
+.headerul li a{
+    color: var(--arka-plan-rengi);
+    text-decoration: none;
+    font-weight: 500;
+    transition: 300ms color;
+}
+.headerul li a:hover{
+    color: var(--üçüncül-renk);
+    transition: 300ms color;
+}
+.headerul li p{
+    color:var(--arka-plan-rengi);
+}
+.headerul li p span {
+    color: var(--üçüncül-renk);
+}
+/*header bitiş*/
+/*anasayfa başlangıç*/
+.anasayfa{
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 30.8vh;
+}
+.anasayfa .anacontainer1 {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    height: 58vh;
+    padding-top: 18vh;
+}
+.anasayfa .anacontainer1 h1{
+    font-size: 6rem;
+    color: var(--ikincil-renk);
+    font-weight: 700;
+    line-height: 8.5rem;
+    text-align: center;
+}
+.anasayfa .anacontainer1 div {
+    width: 80%;
+    height: .2rem;
+    background-color: var(--üçüncül-renk);
+    margin: 2rem 0;
+    border-radius: 20px;
+}
+.anasayfa .anacontainer1 p{
+    font-size: 2rem;
+    color: var(--metin-rengi);
+    font-weight: 600;
+    text-align: center;
+    line-height: 3rem;
+}
+.anacontainer2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.anacontainer2 p {
+    font-size: 2.0rem;
+    color: var(--birincil-renk);
+    font-weight: 600;
+}
+/*anasayfa bitiş*/
+/*problem başlangıç*/
+.problem {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--arka-plan-rengi);
+}
+.procontainer1{
+    height: 100%;
+    width: 43.5%;
+    display: block;
+    padding-top: 8rem;
+    padding-left: 3rem;
+    background-color: var(--arka-plan-rengi);
+}
+.procontainer2{
+    height: 100%;
+    width: 55%;
+    background-color: var(--ikincil-renk);
+    display: block;
+}
+.procontainer1 .proh1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--ikincil-renk);
+}
+.procontainer1 ul {
+    list-style: none;
+    margin-top: 1rem;
+}
+.procontainer1 ul li {
+    margin-bottom: 1rem;
+    padding: 2.2rem;
+    border-radius: 15px;
+    background-color: var(--arka-plan-rengi);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+.procontainer1 ul li h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--ikincil-renk);
+}
+.procontainer1 ul li .h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--üçüncül-renk);
+    margin-top: 0.5rem;
+}
+.procontainer1 ul li .hikinci {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--birincil-renk);
+    margin-top: 0.5rem;
+}
+.procontainer1 ul li p {
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--metin-rengi);
+    margin-top: 0.5rem;
+    text-align: start;
+}
+/*problem bitiş*/
+

@@ -10,37 +10,70 @@
 </head>
 <body>
     <header>
-        <h1>İklimİz</h1>
+        <h1 class="logo">İklimİz</h1>
         <nav>
-            <ul>
+            <ul class="headerul">
                 <li>
-                    <a href=""></a>
+                    <a href="#PROBLEM">PROBLEM</a>
                 </li>
                 <li>
-                    <a href=""></a>
+                    <a href="#">DÖNÜŞÜM</a>
                 </li>
                 <li>
-                    <a href=""></a>
+                    <a href="#">ANALİZ</a>
                 </li>
                 <li>
-                    <p>CO<sub>2</sub>:<span>427</span>ppm</p>
+                    <p>CO<sub>2</sub>:<span>427ppm</span></p>
                 </li>
             </ul>
         </nav>
     </header>
     <main>
-        <section>
-                <div>
+        <section class="anasayfa" id="ANASAYFA">
+                <div class="anacontainer1">
                     <h1>Geleceğin İzini<br>
                     Bugünden Takip Edin</h1>
                     <div></div>
                     <p>Küresel veri kaynaklarından beslenen, yüksek performanslı ve erişilebilir iklim takip dashboard'u. 
                         Dünyanın nereye gittiğini ve dönüşümün ne kadar hızlı ilerlediğini görün.</p>
                 </div>
-                <div>
+                <div class="anacontainer2">
                     <img src="gorsel/DownArrow.svg" alt="arrow">
                     <p>Verileri Keşfetmek İçin Kaydırın</p>
                 </div>
+        </section>
+        <section class="problem" id="PROBLEM">
+            <div class="procontainer1">
+                <h1 class="proh1">Problem</h1>
+                <ul>
+                    <li class="co">
+                        <h1>Atmosferik Karbon<br>
+                        Rekoru</h1>
+                        <h2 class="h2">428 ppm</h2>
+                        <p>Atmosferdeki $CO_2$ seviyesi, sanayi öncesi döneme göre %50 daha yüksek. 
+                        2024 yılında kaydedilen 3.75 ppm'lik artış, modern tarihin en büyük yıllık sıçraması olarak kayıtlara geçti.</p>
+                    </li>
+                    <li class="sıcak">
+                        <h1>Küresel Isınma<br>
+                        Endeksi</h1>
+                        <h2 class="hikinci">+1.19°C</h2>
+                        <p>2024 yılı, kayıtların tutulmaya başlandığı 1880'den bu yana "tarihin en sıcak yılı" oldu. 
+                        2025 yılı ise El Niño etkisinin azalmasına rağmen tarihteki en sıcak üçüncü yıl olarak bu tehlikeli trendi sürdürdü.</p>
+                    </li>
+                    <li class="deniz">
+                        <h1>Okyanus Genleşmesi<br>
+                        ve Risk</h1>
+                        <h2 class="h2">+105 mm</h2>
+                        <p>Deniz seviyeleri son 30 yılda iki katından fazla hızlanarak yükseldi. 
+                        2024 yılında yaşanan beklenmedik artışın temel sebebi, ısınan okyanus suyunun fiziksel olarak genleşmesidir.</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="procontainer2">
+                <canvas class="cocanvas"></canvas>
+                <canvas class="sıcakcanvas"></canvas>
+                <canvas class="denizcanvas"></canvas>
+            </div>
         </section>
     </main>
 </body>
