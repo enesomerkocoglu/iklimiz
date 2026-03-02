@@ -26,6 +26,7 @@ header{
     padding: 0 7rem;
     position: sticky;
     top: 0;
+    z-index: 1000;
 }
 .logo{
     color: var(--arka-plan-rengi);
@@ -76,7 +77,7 @@ header{
     flex-direction: column;
     width: 50%;
     height: 58vh;
-    padding-top: 18vh;
+    padding-top: 18vh;  
 }
 .anasayfa .anacontainer1 h1{
     font-size: 6rem;
@@ -85,7 +86,7 @@ header{
     line-height: 8.5rem;
     text-align: center;
 }
-.anasayfa .anacontainer1 div {
+.gorsel {
     width: 80%;
     height: .2rem;
     background-color: var(--üçüncül-renk);
@@ -123,9 +124,10 @@ header{
 .procontainer1{
     height: 100%;
     width: 43.5%;
-    display: block;
-    padding-top: 8rem;
+    display: grid;
+    grid-template-rows: auto auto auto;
     padding-left: 3rem;
+    padding-top: 8rem;
     background-color: var(--arka-plan-rengi);
 }
 .procontainer2{
@@ -139,35 +141,26 @@ header{
     font-weight: 700;
     color: var(--ikincil-renk);
 }
-.procontainer1 ul {
-    list-style: none;
-    margin-top: 1rem;
-}
-.procontainer1 ul li {
+.procontainer1 .prodiv {
     margin-bottom: 1rem;
     padding: 2.2rem;
     border-radius: 15px;
     background-color: var(--arka-plan-rengi);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    position: relative;
 }
-.procontainer1 ul li h1 {
+.procontainer1 h1 {
     font-size: 3.5rem;
     font-weight: 700;
     color: var(--ikincil-renk);
 }
-.procontainer1 ul li .h2 {
+.procontainer1 h2 {
     font-size: 2.5rem;
     font-weight: 800;
     color: var(--üçüncül-renk);
     margin-top: 0.5rem;
 }
-.procontainer1 ul li .hikinci {
-    font-size: 2.5rem;
-    font-weight: 800;
-    color: var(--birincil-renk);
-    margin-top: 0.5rem;
-}
-.procontainer1 ul li p {
+.procontainer1 p {
     font-size: 2rem;
     font-weight: 500;
     color: var(--metin-rengi);
@@ -175,4 +168,125 @@ header{
     text-align: start;
 }
 /*problem bitiş*/
+/*dönüşüm başlangıç*/
+.donusum {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: var(--arka-plan-rengi);
+}
+.donuscontainer1{
+    height: 100vh;
+    width: 45%;
+    background-color: var(--arka-plan-rengi);
+    padding: 14rem 5.2rem 8rem 5.2rem;
+    display: grid;
+    grid-template-rows: auto auto auto;
+}
+.donuscontainer1 .donuşdiv1 {
+    height: auto;
+    position: relative;
+    padding-top: 7rem;
+}
+.donuscontainer1 h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--ikincil-renk);   
+}
+.donuscontainer1 h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--üçüncül-renk);
+    margin-top: 0.5rem;
+}
+.donuscontainer1 p {
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--metin-rengi);
+    margin-top: 2rem;
+    text-align: start; 
+}
+.donuscontainer1 h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--ikincil-renk);   
+}
+.donuscontainer2{
+    height: 55vh;
+    width: 40%;
+    background-color: var(--birincil-renk);
+    display: grid;
+    grid-template-rows: auto auto;
+    position: relative;
+    margin-left: 15rem;
+    margin-top: 7rem;
+    border-radius: 15px;
+    padding: 9rem 10rem 11rem 10rem;
+    gap: 5rem;
+}
 
+.donuscontainer1 h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--üçüncül-renk);
+    margin-top: 0.5rem;
+}
+.donuscontainer1 p {
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--metin-rengi);
+    margin-top: 2rem;
+    text-align: start; 
+}
+.donuscontainer2 h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--arka-plan-rengi);
+    margin-bottom: .5rem;
+}
+.donuscontainer2 .div1{
+    width: 100%;
+    height: 70%;
+    background-color: var(--arka-plan-rengi);
+    position: relative;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.donuscontainer2 .span1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--birincil-renk);
+    position: absolute;
+    right: 2rem;
+    top: 3rem;
+}
+.donuscontainer2 .enerjidiv2 {
+    width: 32%;
+    height: 100%;
+    background-color: var(--üçüncül-renk);
+    display: flex;
+    align-items: center;
+    padding-left: 2rem;
+}
+.donuscontainer2 .yatırımdiv2 {
+    width: 65%;
+    height: 100%;
+    background-color: var(--üçüncül-renk);
+    display: flex;
+    align-items: center;
+    padding-left: 2rem;
+}
+.donuscontainer2 .enerjispan2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--arka-plan-rengi);
+}
+.donuscontainer2 .yatırımspan2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--arka-plan-rengi);
+}
+/*dönüşüm bitiş*/
