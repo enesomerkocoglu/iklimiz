@@ -489,7 +489,7 @@ footer p {
 .footercontainer2 .iletişim {
     display: grid;
     grid-template-rows: auto auto;
-    gap: 2rem;
+    gap: 1rem;
 }
 .footercontainer2 h1 {
     font-size: 3rem;
@@ -498,7 +498,24 @@ footer p {
     margin-bottom: 1rem;
 }
 .footercontainer2 div {
-    height: 6rem;
+    height: 5rem;
     width: 100%;
+    display: flex;
+    align-items: center;
 }
+.footercontainer2 div a {
+    font-size: 2rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--arka-plan-rengi);
+    transition: .3s ease;
+}
+.footercontainer2 div a:hover {
+    transition: .3s ease;
+    color: var(--üçüncül-renk);
+}
+.footercontainer2 div a img {
+    margin-right: 2rem;
+}
+
 /*footer bitiş*/
