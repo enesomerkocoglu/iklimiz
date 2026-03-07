@@ -1,0 +1,1012 @@
+{
+  "TUR": {
+    "1985": {
+      "co2_per_capita": 2.089,
+      "methane_per_capita": 0.714,
+      "total_ghg": 187.02
+    },
+    "1986": {
+      "co2_per_capita": 2.238,
+      "methane_per_capita": 0.719,
+      "total_ghg": 217.273
+    },
+    "1987": {
+      "co2_per_capita": 2.436,
+      "methane_per_capita": 0.721,
+      "total_ghg": 214.272
+    },
+    "1988": {
+      "co2_per_capita": 2.32,
+      "methane_per_capita": 0.698,
+      "total_ghg": 217.053
+    },
+    "1989": {
+      "co2_per_capita": 2.509,
+      "methane_per_capita": 0.693,
+      "total_ghg": 216.2
+    },
+    "1990": {
+      "co2_per_capita": 2.759,
+      "methane_per_capita": 0.654,
+      "total_ghg": 233.442
+    },
+    "1991": {
+      "co2_per_capita": 2.826,
+      "methane_per_capita": 0.617,
+      "total_ghg": 231.524
+    },
+    "1992": {
+      "co2_per_capita": 2.884,
+      "methane_per_capita": 0.627,
+      "total_ghg": 239.7
+    },
+    "1993": {
+      "co2_per_capita": 2.954,
+      "methane_per_capita": 0.605,
+      "total_ghg": 256.232
+    },
+    "1994": {
+      "co2_per_capita": 2.842,
+      "methane_per_capita": 0.585,
+      "total_ghg": 240.383
+    },
+    "1995": {
+      "co2_per_capita": 3.026,
+      "methane_per_capita": 0.601,
+      "total_ghg": 253.127
+    },
+    "1996": {
+      "co2_per_capita": 3.278,
+      "methane_per_capita": 0.657,
+      "total_ghg": 274.507
+    },
+    "1997": {
+      "co2_per_capita": 3.429,
+      "methane_per_capita": 0.721,
+      "total_ghg": 302.625
+    },
+    "1998": {
+      "co2_per_capita": 3.383,
+      "methane_per_capita": 0.742,
+      "total_ghg": 304.182
+    },
+    "1999": {
+      "co2_per_capita": 3.27,
+      "methane_per_capita": 0.776,
+      "total_ghg": 292.581
+    },
+    "2000": {
+      "co2_per_capita": 3.56,
+      "methane_per_capita": 0.817,
+      "total_ghg": 320.576
+    },
+    "2001": {
+      "co2_per_capita": 3.274,
+      "methane_per_capita": 0.819,
+      "total_ghg": 309.57
+    },
+    "2002": {
+      "co2_per_capita": 3.346,
+      "methane_per_capita": 0.725,
+      "total_ghg": 298.528
+    },
+    "2003": {
+      "co2_per_capita": 3.536,
+      "methane_per_capita": 0.725,
+      "total_ghg": 340.492
+    },
+    "2004": {
+      "co2_per_capita": 3.613,
+      "methane_per_capita": 0.662,
+      "total_ghg": 332.467
+    },
+    "2005": {
+      "co2_per_capita": 3.861,
+      "methane_per_capita": 0.679,
+      "total_ghg": 338.159
+    },
+    "2006": {
+      "co2_per_capita": 4.075,
+      "methane_per_capita": 0.756,
+      "total_ghg": 359.684
+    },
+    "2007": {
+      "co2_per_capita": 4.473,
+      "methane_per_capita": 0.8,
+      "total_ghg": 387.689
+    },
+    "2008": {
+      "co2_per_capita": 4.369,
+      "methane_per_capita": 0.784,
+      "total_ghg": 382.37
+    },
+    "2009": {
+      "co2_per_capita": 4.396,
+      "methane_per_capita": 0.818,
+      "total_ghg": 400.912
+    },
+    "2010": {
+      "co2_per_capita": 4.345,
+      "methane_per_capita": 0.88,
+      "total_ghg": 397.616
+    },
+    "2011": {
+      "co2_per_capita": 4.638,
+      "methane_per_capita": 0.905,
+      "total_ghg": 434.297
+    },
+    "2012": {
+      "co2_per_capita": 4.769,
+      "methane_per_capita": 0.964,
+      "total_ghg": 454.121
+    },
+    "2013": {
+      "co2_per_capita": 4.589,
+      "methane_per_capita": 0.999,
+      "total_ghg": 458.164
+    },
+    "2014": {
+      "co2_per_capita": 4.706,
+      "methane_per_capita": 1.029,
+      "total_ghg": 475.808
+    },
+    "2015": {
+      "co2_per_capita": 4.845,
+      "methane_per_capita": 1.029,
+      "total_ghg": 504.964
+    },
+    "2016": {
+      "co2_per_capita": 4.967,
+      "methane_per_capita": 1.042,
+      "total_ghg": 526.832
+    },
+    "2017": {
+      "co2_per_capita": 5.183,
+      "methane_per_capita": 1.065,
+      "total_ghg": 556.874
+    },
+    "2018": {
+      "co2_per_capita": 5.021,
+      "methane_per_capita": 1.138,
+      "total_ghg": 536.63
+    },
+    "2019": {
+      "co2_per_capita": 4.763,
+      "methane_per_capita": 1.152,
+      "total_ghg": 534.576
+    },
+    "2020": {
+      "co2_per_capita": 4.836,
+      "methane_per_capita": 1.182,
+      "total_ghg": 568.584
+    },
+    "2021": {
+      "co2_per_capita": 5.276,
+      "methane_per_capita": 1.214,
+      "total_ghg": 630.849
+    },
+    "2022": {
+      "co2_per_capita": 5.095,
+      "methane_per_capita": 1.227,
+      "total_ghg": 611.291
+    },
+    "2023": {
+      "co2_per_capita": 5.58,
+      "methane_per_capita": 1.244,
+      "total_ghg": 656.268
+    },
+    "2024": {
+      "co2_per_capita": 5.865,
+      "methane_per_capita": 1.278,
+      "total_ghg": 680.012
+    }
+  },
+  "USA": {
+    "1985": {
+      "co2_per_capita": 18.6,
+      "methane_per_capita": 3.684,
+      "total_ghg": 5895.366
+    },
+    "1986": {
+      "co2_per_capita": 18.438,
+      "methane_per_capita": 3.602,
+      "total_ghg": 5836.974
+    },
+    "1987": {
+      "co2_per_capita": 19.06,
+      "methane_per_capita": 3.562,
+      "total_ghg": 6046.492
+    },
+    "1988": {
+      "co2_per_capita": 19.718,
+      "methane_per_capita": 3.549,
+      "total_ghg": 6267.084
+    },
+    "1989": {
+      "co2_per_capita": 19.788,
+      "methane_per_capita": 3.515,
+      "total_ghg": 6332.358
+    },
+    "1990": {
+      "co2_per_capita": 20.254,
+      "methane_per_capita": 3.417,
+      "total_ghg": 6489.288
+    },
+    "1991": {
+      "co2_per_capita": 19.793,
+      "methane_per_capita": 3.347,
+      "total_ghg": 6393.464
+    },
+    "1992": {
+      "co2_per_capita": 19.949,
+      "methane_per_capita": 3.317,
+      "total_ghg": 6464.021
+    },
+    "1993": {
+      "co2_per_capita": 20.102,
+      "methane_per_capita": 3.277,
+      "total_ghg": 6552.8
+    },
+    "1994": {
+      "co2_per_capita": 20.197,
+      "methane_per_capita": 3.263,
+      "total_ghg": 6686.332
+    },
+    "1995": {
+      "co2_per_capita": 20.23,
+      "methane_per_capita": 3.168,
+      "total_ghg": 6642.142
+    },
+    "1996": {
+      "co2_per_capita": 20.679,
+      "methane_per_capita": 3.114,
+      "total_ghg": 6806.676
+    },
+    "1997": {
+      "co2_per_capita": 20.745,
+      "methane_per_capita": 3.07,
+      "total_ghg": 6885.409
+    },
+    "1998": {
+      "co2_per_capita": 20.775,
+      "methane_per_capita": 2.982,
+      "total_ghg": 6926.782
+    },
+    "1999": {
+      "co2_per_capita": 20.806,
+      "methane_per_capita": 2.903,
+      "total_ghg": 7014.896
+    },
+    "2000": {
+      "co2_per_capita": 21.398,
+      "methane_per_capita": 2.841,
+      "total_ghg": 7217.24
+    },
+    "2001": {
+      "co2_per_capita": 20.767,
+      "methane_per_capita": 2.73,
+      "total_ghg": 6976.344
+    },
+    "2002": {
+      "co2_per_capita": 20.718,
+      "methane_per_capita": 2.639,
+      "total_ghg": 7059.111
+    },
+    "2003": {
+      "co2_per_capita": 20.718,
+      "methane_per_capita": 2.637,
+      "total_ghg": 7245.448
+    },
+    "2004": {
+      "co2_per_capita": 20.874,
+      "methane_per_capita": 2.614,
+      "total_ghg": 7314.667
+    },
+    "2005": {
+      "co2_per_capita": 20.719,
+      "methane_per_capita": 2.613,
+      "total_ghg": 7428.8
+    },
+    "2006": {
+      "co2_per_capita": 20.237,
+      "methane_per_capita": 2.628,
+      "total_ghg": 7064.877
+    },
+    "2007": {
+      "co2_per_capita": 20.28,
+      "methane_per_capita": 2.63,
+      "total_ghg": 7181.516
+    },
+    "2008": {
+      "co2_per_capita": 19.409,
+      "methane_per_capita": 2.658,
+      "total_ghg": 7074.333
+    },
+    "2009": {
+      "co2_per_capita": 17.811,
+      "methane_per_capita": 2.508,
+      "total_ghg": 6577.918
+    },
+    "2010": {
+      "co2_per_capita": 18.225,
+      "methane_per_capita": 2.431,
+      "total_ghg": 6823.523
+    },
+    "2011": {
+      "co2_per_capita": 17.634,
+      "methane_per_capita": 2.434,
+      "total_ghg": 6523.64
+    },
+    "2012": {
+      "co2_per_capita": 16.812,
+      "methane_per_capita": 2.364,
+      "total_ghg": 6388.708
+    },
+    "2013": {
+      "co2_per_capita": 17.099,
+      "methane_per_capita": 2.337,
+      "total_ghg": 6488.665
+    },
+    "2014": {
+      "co2_per_capita": 17.119,
+      "methane_per_capita": 2.362,
+      "total_ghg": 6610.767
+    },
+    "2015": {
+      "co2_per_capita": 16.461,
+      "methane_per_capita": 2.315,
+      "total_ghg": 6408.286
+    },
+    "2016": {
+      "co2_per_capita": 15.935,
+      "methane_per_capita": 2.228,
+      "total_ghg": 6308.617
+    },
+    "2017": {
+      "co2_per_capita": 15.639,
+      "methane_per_capita": 2.255,
+      "total_ghg": 6319.225
+    },
+    "2018": {
+      "co2_per_capita": 16.001,
+      "methane_per_capita": 2.321,
+      "total_ghg": 6466.737
+    },
+    "2019": {
+      "co2_per_capita": 15.5,
+      "methane_per_capita": 2.366,
+      "total_ghg": 6360.787
+    },
+    "2020": {
+      "co2_per_capita": 13.817,
+      "methane_per_capita": 2.242,
+      "total_ghg": 5758.456
+    },
+    "2021": {
+      "co2_per_capita": 14.758,
+      "methane_per_capita": 2.321,
+      "total_ghg": 6131.129
+    },
+    "2022": {
+      "co2_per_capita": 14.802,
+      "methane_per_capita": 2.348,
+      "total_ghg": 6201.504
+    },
+    "2023": {
+      "co2_per_capita": 14.319,
+      "methane_per_capita": 2.385,
+      "total_ghg": 6078.455
+    },
+    "2024": {
+      "co2_per_capita": 14.197,
+      "methane_per_capita": 2.369,
+      "total_ghg": 6054.308
+    }
+  },
+  "CHN": {
+    "1985": {
+      "co2_per_capita": 1.884,
+      "methane_per_capita": 0.727,
+      "total_ghg": 3560.514
+    },
+    "1986": {
+      "co2_per_capita": 1.953,
+      "methane_per_capita": 0.731,
+      "total_ghg": 3684.369
+    },
+    "1987": {
+      "co2_per_capita": 2.059,
+      "methane_per_capita": 0.735,
+      "total_ghg": 3851.818
+    },
+    "1988": {
+      "co2_per_capita": 2.174,
+      "methane_per_capita": 0.738,
+      "total_ghg": 4062.891
+    },
+    "1989": {
+      "co2_per_capita": 2.171,
+      "methane_per_capita": 0.75,
+      "total_ghg": 4144.589
+    },
+    "1990": {
+      "co2_per_capita": 2.153,
+      "methane_per_capita": 0.752,
+      "total_ghg": 4205.167
+    },
+    "1991": {
+      "co2_per_capita": 2.237,
+      "methane_per_capita": 0.743,
+      "total_ghg": 4315.059
+    },
+    "1992": {
+      "co2_per_capita": 2.306,
+      "methane_per_capita": 0.737,
+      "total_ghg": 4445.956
+    },
+    "1993": {
+      "co2_per_capita": 2.434,
+      "methane_per_capita": 0.732,
+      "total_ghg": 4591.354
+    },
+    "1994": {
+      "co2_per_capita": 2.559,
+      "methane_per_capita": 0.745,
+      "total_ghg": 4901.601
+    },
+    "1995": {
+      "co2_per_capita": 2.747,
+      "methane_per_capita": 0.779,
+      "total_ghg": 5151.296
+    },
+    "1996": {
+      "co2_per_capita": 2.843,
+      "methane_per_capita": 0.789,
+      "total_ghg": 5359.031
+    },
+    "1997": {
+      "co2_per_capita": 2.83,
+      "methane_per_capita": 0.748,
+      "total_ghg": 5318.064
+    },
+    "1998": {
+      "co2_per_capita": 2.682,
+      "methane_per_capita": 0.747,
+      "total_ghg": 5195.279
+    },
+    "1999": {
+      "co2_per_capita": 2.817,
+      "methane_per_capita": 0.744,
+      "total_ghg": 5342.072
+    },
+    "2000": {
+      "co2_per_capita": 2.87,
+      "methane_per_capita": 0.748,
+      "total_ghg": 5282.098
+    },
+    "2001": {
+      "co2_per_capita": 2.912,
+      "methane_per_capita": 0.749,
+      "total_ghg": 5282.242
+    },
+    "2002": {
+      "co2_per_capita": 3.185,
+      "methane_per_capita": 0.747,
+      "total_ghg": 5600.191
+    },
+    "2003": {
+      "co2_per_capita": 3.735,
+      "methane_per_capita": 0.778,
+      "total_ghg": 6373.199
+    },
+    "2004": {
+      "co2_per_capita": 4.002,
+      "methane_per_capita": 0.821,
+      "total_ghg": 6840.591
+    },
+    "2005": {
+      "co2_per_capita": 4.49,
+      "methane_per_capita": 0.855,
+      "total_ghg": 7551.543
+    },
+    "2006": {
+      "co2_per_capita": 4.921,
+      "methane_per_capita": 0.882,
+      "total_ghg": 8215.579
+    },
+    "2007": {
+      "co2_per_capita": 5.261,
+      "methane_per_capita": 0.887,
+      "total_ghg": 8701.73
+    },
+    "2008": {
+      "co2_per_capita": 5.617,
+      "methane_per_capita": 0.887,
+      "total_ghg": 9244.5
+    },
+    "2009": {
+      "co2_per_capita": 5.871,
+      "methane_per_capita": 0.892,
+      "total_ghg": 9644.707
+    },
+    "2010": {
+      "co2_per_capita": 6.37,
+      "methane_per_capita": 0.918,
+      "total_ghg": 10308.954
+    },
+    "2011": {
+      "co2_per_capita": 6.999,
+      "methane_per_capita": 0.973,
+      "total_ghg": 11352.635
+    },
+    "2012": {
+      "co2_per_capita": 7.132,
+      "methane_per_capita": 0.963,
+      "total_ghg": 11526.329
+    },
+    "2013": {
+      "co2_per_capita": 7.21,
+      "methane_per_capita": 0.965,
+      "total_ghg": 11692.455
+    },
+    "2014": {
+      "co2_per_capita": 7.188,
+      "methane_per_capita": 0.966,
+      "total_ghg": 11689.33
+    },
+    "2015": {
+      "co2_per_capita": 7.061,
+      "methane_per_capita": 0.961,
+      "total_ghg": 11642.968
+    },
+    "2016": {
+      "co2_per_capita": 6.943,
+      "methane_per_capita": 0.926,
+      "total_ghg": 11382.781
+    },
+    "2017": {
+      "co2_per_capita": 7.08,
+      "methane_per_capita": 0.934,
+      "total_ghg": 11622.925
+    },
+    "2018": {
+      "co2_per_capita": 7.292,
+      "methane_per_capita": 0.955,
+      "total_ghg": 11989.896
+    },
+    "2019": {
+      "co2_per_capita": 7.526,
+      "methane_per_capita": 0.965,
+      "total_ghg": 12322.384
+    },
+    "2020": {
+      "co2_per_capita": 7.641,
+      "methane_per_capita": 0.981,
+      "total_ghg": 12524.051
+    },
+    "2021": {
+      "co2_per_capita": 7.911,
+      "methane_per_capita": 1.017,
+      "total_ghg": 12958.471
+    },
+    "2022": {
+      "co2_per_capita": 8.218,
+      "methane_per_capita": 1.062,
+      "total_ghg": 13446.92
+    },
+    "2023": {
+      "co2_per_capita": 8.556,
+      "methane_per_capita": 1.084,
+      "total_ghg": 13934.404
+    },
+    "2024": {
+      "co2_per_capita": 8.658,
+      "methane_per_capita": 1.121,
+      "total_ghg": 14107.007
+    }
+  },
+  "IND": {
+    "1985": {
+      "co2_per_capita": 0.515,
+      "methane_per_capita": 0.781,
+      "total_ghg": 1287.643
+    },
+    "1986": {
+      "co2_per_capita": 0.539,
+      "methane_per_capita": 0.787,
+      "total_ghg": 1362.668
+    },
+    "1987": {
+      "co2_per_capita": 0.563,
+      "methane_per_capita": 0.774,
+      "total_ghg": 1354.345
+    },
+    "1988": {
+      "co2_per_capita": 0.594,
+      "methane_per_capita": 0.788,
+      "total_ghg": 1474.339
+    },
+    "1989": {
+      "co2_per_capita": 0.639,
+      "methane_per_capita": 0.788,
+      "total_ghg": 1514.593
+    },
+    "1990": {
+      "co2_per_capita": 0.668,
+      "methane_per_capita": 0.735,
+      "total_ghg": 1526.914
+    },
+    "1991": {
+      "co2_per_capita": 0.696,
+      "methane_per_capita": 0.728,
+      "total_ghg": 1561.427
+    },
+    "1992": {
+      "co2_per_capita": 0.726,
+      "methane_per_capita": 0.719,
+      "total_ghg": 1632.941
+    },
+    "1993": {
+      "co2_per_capita": 0.734,
+      "methane_per_capita": 0.703,
+      "total_ghg": 1638.294
+    },
+    "1994": {
+      "co2_per_capita": 0.759,
+      "methane_per_capita": 0.694,
+      "total_ghg": 1675.792
+    },
+    "1995": {
+      "co2_per_capita": 0.792,
+      "methane_per_capita": 0.689,
+      "total_ghg": 1712.603
+    },
+    "1996": {
+      "co2_per_capita": 0.841,
+      "methane_per_capita": 0.683,
+      "total_ghg": 1817.629
+    },
+    "1997": {
+      "co2_per_capita": 0.859,
+      "methane_per_capita": 0.677,
+      "total_ghg": 1831.317
+    },
+    "1998": {
+      "co2_per_capita": 0.86,
+      "methane_per_capita": 0.667,
+      "total_ghg": 1855.813
+    },
+    "1999": {
+      "co2_per_capita": 0.926,
+      "methane_per_capita": 0.659,
+      "total_ghg": 1939.573
+    },
+    "2000": {
+      "co2_per_capita": 0.933,
+      "methane_per_capita": 0.648,
+      "total_ghg": 2005.885
+    },
+    "2001": {
+      "co2_per_capita": 0.929,
+      "methane_per_capita": 0.64,
+      "total_ghg": 2000.273
+    },
+    "2002": {
+      "co2_per_capita": 0.941,
+      "methane_per_capita": 0.623,
+      "total_ghg": 1994.045
+    },
+    "2003": {
+      "co2_per_capita": 0.957,
+      "methane_per_capita": 0.623,
+      "total_ghg": 2059.556
+    },
+    "2004": {
+      "co2_per_capita": 0.999,
+      "methane_per_capita": 0.621,
+      "total_ghg": 2129.202
+    },
+    "2005": {
+      "co2_per_capita": 1.035,
+      "methane_per_capita": 0.625,
+      "total_ghg": 2205.413
+    },
+    "2006": {
+      "co2_per_capita": 1.103,
+      "methane_per_capita": 0.625,
+      "total_ghg": 2324.594
+    },
+    "2007": {
+      "co2_per_capita": 1.17,
+      "methane_per_capita": 0.63,
+      "total_ghg": 2485.674
+    },
+    "2008": {
+      "co2_per_capita": 1.234,
+      "methane_per_capita": 0.633,
+      "total_ghg": 2641.331
+    },
+    "2009": {
+      "co2_per_capita": 1.316,
+      "methane_per_capita": 0.622,
+      "total_ghg": 2738.05
+    },
+    "2010": {
+      "co2_per_capita": 1.35,
+      "methane_per_capita": 0.619,
+      "total_ghg": 2848.131
+    },
+    "2011": {
+      "co2_per_capita": 1.4,
+      "methane_per_capita": 0.619,
+      "total_ghg": 2950.343
+    },
+    "2012": {
+      "co2_per_capita": 1.507,
+      "methane_per_capita": 0.613,
+      "total_ghg": 3164.01
+    },
+    "2013": {
+      "co2_per_capita": 1.54,
+      "methane_per_capita": 0.585,
+      "total_ghg": 3124.772
+    },
+    "2014": {
+      "co2_per_capita": 1.637,
+      "methane_per_capita": 0.584,
+      "total_ghg": 3216.867
+    },
+    "2015": {
+      "co2_per_capita": 1.681,
+      "methane_per_capita": 0.582,
+      "total_ghg": 3290.423
+    },
+    "2016": {
+      "co2_per_capita": 1.75,
+      "methane_per_capita": 0.582,
+      "total_ghg": 3365.011
+    },
+    "2017": {
+      "co2_per_capita": 1.784,
+      "methane_per_capita": 0.579,
+      "total_ghg": 3415.989
+    },
+    "2018": {
+      "co2_per_capita": 1.888,
+      "methane_per_capita": 0.582,
+      "total_ghg": 3616.201
+    },
+    "2019": {
+      "co2_per_capita": 1.88,
+      "methane_per_capita": 0.576,
+      "total_ghg": 3613.001
+    },
+    "2020": {
+      "co2_per_capita": 1.727,
+      "methane_per_capita": 0.576,
+      "total_ghg": 3436.429
+    },
+    "2021": {
+      "co2_per_capita": 1.892,
+      "methane_per_capita": 0.581,
+      "total_ghg": 3697.615
+    },
+    "2022": {
+      "co2_per_capita": 1.986,
+      "methane_per_capita": 0.586,
+      "total_ghg": 3869.995
+    },
+    "2023": {
+      "co2_per_capita": 2.13,
+      "methane_per_capita": 0.589,
+      "total_ghg": 4121.424
+    },
+    "2024": {
+      "co2_per_capita": 2.201,
+      "methane_per_capita": 0.592,
+      "total_ghg": 4262.411
+    }
+  },
+  "DEU": {
+    "1985": {
+      "co2_per_capita": 13.407,
+      "methane_per_capita": 2.084,
+      "total_ghg": 1269.186
+    },
+    "1986": {
+      "co2_per_capita": 13.439,
+      "methane_per_capita": 2.054,
+      "total_ghg": 1268.305
+    },
+    "1987": {
+      "co2_per_capita": 13.224,
+      "methane_per_capita": 1.988,
+      "total_ghg": 1250.928
+    },
+    "1988": {
+      "co2_per_capita": 13.124,
+      "methane_per_capita": 1.94,
+      "total_ghg": 1244.393
+    },
+    "1989": {
+      "co2_per_capita": 12.766,
+      "methane_per_capita": 1.908,
+      "total_ghg": 1226.778
+    },
+    "1990": {
+      "co2_per_capita": 13.233,
+      "methane_per_capita": 1.855,
+      "total_ghg": 1261.087
+    },
+    "1991": {
+      "co2_per_capita": 12.664,
+      "methane_per_capita": 1.761,
+      "total_ghg": 1217.409
+    },
+    "1992": {
+      "co2_per_capita": 11.978,
+      "methane_per_capita": 1.661,
+      "total_ghg": 1166.562
+    },
+    "1993": {
+      "co2_per_capita": 11.774,
+      "methane_per_capita": 1.584,
+      "total_ghg": 1150.585
+    },
+    "1994": {
+      "co2_per_capita": 11.535,
+      "methane_per_capita": 1.524,
+      "total_ghg": 1132.333
+    },
+    "1995": {
+      "co2_per_capita": 11.46,
+      "methane_per_capita": 1.503,
+      "total_ghg": 1123.859
+    },
+    "1996": {
+      "co2_per_capita": 11.666,
+      "methane_per_capita": 1.459,
+      "total_ghg": 1143.871
+    },
+    "1997": {
+      "co2_per_capita": 11.306,
+      "methane_per_capita": 1.403,
+      "total_ghg": 1109.39
+    },
+    "1998": {
+      "co2_per_capita": 11.261,
+      "methane_per_capita": 1.339,
+      "total_ghg": 1078.613
+    },
+    "1999": {
+      "co2_per_capita": 10.963,
+      "methane_per_capita": 1.307,
+      "total_ghg": 1044.601
+    },
+    "2000": {
+      "co2_per_capita": 10.99,
+      "methane_per_capita": 1.232,
+      "total_ghg": 1042.311
+    },
+    "2001": {
+      "co2_per_capita": 11.171,
+      "methane_per_capita": 1.183,
+      "total_ghg": 1053.208
+    },
+    "2002": {
+      "co2_per_capita": 10.952,
+      "methane_per_capita": 1.139,
+      "total_ghg": 1034.082
+    },
+    "2003": {
+      "co2_per_capita": 10.894,
+      "methane_per_capita": 1.099,
+      "total_ghg": 1027.411
+    },
+    "2004": {
+      "co2_per_capita": 10.678,
+      "methane_per_capita": 1.062,
+      "total_ghg": 1007.236
+    },
+    "2005": {
+      "co2_per_capita": 10.578,
+      "methane_per_capita": 1.025,
+      "total_ghg": 994.287
+    },
+    "2006": {
+      "co2_per_capita": 10.85,
+      "methane_per_capita": 0.996,
+      "total_ghg": 1010.108
+    },
+    "2007": {
+      "co2_per_capita": 10.408,
+      "methane_per_capita": 1.003,
+      "total_ghg": 972.651
+    },
+    "2008": {
+      "co2_per_capita": 10.561,
+      "methane_per_capita": 0.982,
+      "total_ghg": 978.997
+    },
+    "2009": {
+      "co2_per_capita": 9.761,
+      "methane_per_capita": 0.953,
+      "total_ghg": 905.805
+    },
+    "2010": {
+      "co2_per_capita": 10.228,
+      "methane_per_capita": 0.94,
+      "total_ghg": 944.315
+    },
+    "2011": {
+      "co2_per_capita": 9.95,
+      "methane_per_capita": 0.921,
+      "total_ghg": 917.062
+    },
+    "2012": {
+      "co2_per_capita": 10.061,
+      "methane_per_capita": 0.902,
+      "total_ghg": 928.365
+    },
+    "2013": {
+      "co2_per_capita": 10.263,
+      "methane_per_capita": 0.883,
+      "total_ghg": 946.155
+    },
+    "2014": {
+      "co2_per_capita": 9.74,
+      "methane_per_capita": 0.864,
+      "total_ghg": 905.698
+    },
+    "2015": {
+      "co2_per_capita": 9.757,
+      "methane_per_capita": 0.844,
+      "total_ghg": 911.142
+    },
+    "2016": {
+      "co2_per_capita": 9.642,
+      "methane_per_capita": 0.818,
+      "total_ghg": 907.177
+    },
+    "2017": {
+      "co2_per_capita": 9.441,
+      "methane_per_capita": 0.811,
+      "total_ghg": 891.569
+    },
+    "2018": {
+      "co2_per_capita": 9.101,
+      "methane_per_capita": 0.78,
+      "total_ghg": 859.214
+    },
+    "2019": {
+      "co2_per_capita": 8.481,
+      "methane_per_capita": 0.754,
+      "total_ghg": 808.001
+    },
+    "2020": {
+      "co2_per_capita": 7.739,
+      "methane_per_capita": 0.73,
+      "total_ghg": 743.816
+    },
+    "2021": {
+      "co2_per_capita": 8.101,
+      "methane_per_capita": 0.72,
+      "total_ghg": 774.763
+    },
+    "2022": {
+      "co2_per_capita": 7.942,
+      "methane_per_capita": 0.701,
+      "total_ghg": 759.795
+    },
+    "2023": {
+      "co2_per_capita": 7.023,
+      "methane_per_capita": 0.679,
+      "total_ghg": 683.559
+    },
+    "2024": {
+      "co2_per_capita": 6.769,
+      "methane_per_capita": 0.664,
+      "total_ghg": 659.655
+    }
+  }
+}
