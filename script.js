@@ -140,3 +140,52 @@ async function denizSeviyesiGrafik() {
     });
 }
 denizSeviyesiGrafik();
+let myChart = null;
+
+async function grafikGuncelle(metrik, etiket) {
+
+    const response = await fetch('filtered_data.json');
+    const data = await response.json();
+
+    const ulkeVerisi = data["TUR"];
+
+    const yillar = Object.keys(ulkeVerisi);
+    const degerler = yillar.map(yil => ulkeVerisi[yil][metrik]);
+
+    const ctx = document.getElementById("iklimAnalizGrafik").getContext("2d");
+
+    if (myChart) {
+        myChart.destroy();
+    }
+
+    myChart = new Chart(ctx, {
+        type: "line",
+        data: {
+            labels: yillar,
+            datasets: [{
+                label: etiket,
+                data: degerler,
+                backgroundColor: "#DAA520",
+                borderColor: "#DAA520",
+                borderWidth: 2,
+                tension: .3, 
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                x: {
+                    grid: { display: false }
+                },
+                y: {
+                    grid: { color: 'rgba(0,0,0,0.1)' }
+                }
+            }
+        },
+        
+        
+    });
+}
+
+window.onload = () => grafikGuncelle("co2_per_capita", "Karbon İzi (Ton)");

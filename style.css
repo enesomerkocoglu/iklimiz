@@ -173,7 +173,7 @@ header{
 }
 .procontainer2{
     height: 100vh;
-    width: 55%;
+    width: 53%;
     padding-top: 10rem ;
     background-color: var(--ikincil-renk);
     display: flex;
@@ -308,8 +308,8 @@ header{
 .analiz {
     height: auto;
     width: 100%;
-    display: grid;
-    grid-template-rows: auto;
+    display: flex;
+    flex-direction: column;
     background-color: var(--arka-plan-rengi);
     padding: 10rem 5.2rem;
     gap: 1.5rem;
@@ -382,7 +382,7 @@ header{
 .analizcontainer1 .metrik-butonlari .show {
     transition: .3s ease;
     background-color: var(--birincil-renk);
-    color: var(--üçüncül-renk);
+    color: var(--arka-plan-rengi);
 }
 .analizcontainer1 .yılaralığı  {
     height: 4rem;
@@ -412,6 +412,7 @@ header{
     width: 100%;
     border-radius: 15px;
     padding: 0 3rem;
+    position: relative;
 }
 .analizcontainer3 {
     display: flex;
@@ -419,11 +420,12 @@ header{
     align-items: center;
     flex-direction: row;
     height: 15vh;
-    width: 100%;    
+    width: 100%;   
+
 }
 .analizcontainer3 div {
     height: 100%;
-    width: 40rem;
+    width: 25%;
     border-radius: 15px;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
     padding: 3rem 3rem;
@@ -563,3 +565,13 @@ footer p {
   background-color: var(--ikincil-renk);
 }
 /*scroll bitiş*/
+#iklimAnalizGrafik {
+    width: 100%;
+    height: auto;
+}
+#iklimAnalizGrafik {
+    width: 100%;
+    height: auto;
+}
+/*yukardakinden iki tane var
+*/
