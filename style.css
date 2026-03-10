@@ -336,23 +336,91 @@ header{
     color: var(--ikincil-renk);
     padding-bottom: .5rem;
 }
+.ulkediv {
+    width: 25.5rem;
+    height: auto;
+    z-index: 100;
+    position: relative;
+}
 .analizcontainer1 #ulke-arama {
     border: 1px solid var(--birincil-renk);
-    border-radius: 10px;
+    border-radius:10px 10px 0 0 ;
     height: 4rem;
-    width: auto;
+    width: 100%;
     background-color: var(--arka-plan-rengi);
     outline: none;
     font-size: 1.5rem;
     color: black;
-    padding-left: 1rem;
+    padding-left:.5rem;
 }
 .analizcontainer1 #ulke-arama::placeholder {
     color: black;
     font-size: 1.5rem;
 }
-.analizcontainer1 #ulke-listesi{
+#secilen-ulkeler {
     display: none;
+}
+#secilen-ulkeler.show{
+    height: 2rem;
+    width: auto;
+    position: absolute;
+    z-index: 111;
+    top: 3.5rem;
+    right: .5rem;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 3px;
+}
+.ulkeler {
+    display: flex;
+    flex-direction: row;
+    background-color: #B0B0B0;
+    padding: 2px;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+}
+.ulkeler img {
+    height: 1.4rem;
+    width: auto;
+    cursor: pointer;
+}
+#secilen-ulkeler p {
+    font-size: 1.3rem;
+    color: var(--arka-plan-rengi);
+    background-color: #B0B0B0;
+    padding: 0 2px 2.5px 0;
+    border-radius: 5px;
+    cursor: default;
+}
+.analizcontainer1 #ulke-listesi{
+    height: 0;
+    overflow: hidden;
+    transition: .3s ease ;
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    width: 100%;
+    border-radius:0 0 10px 10px;
+    background-color: var(--arka-plan-rengi);
+    align-items: center;
+    border-width:0 1px 1px 1px;
+    border-style: solid;
+    border-color: var(--birincil-renk);
+}
+.analizcontainer1 #ulke-listesi.activelist {
+    height: 10rem;
+}
+.analizcontainer1 #ulke-listesi li {
+    list-style: none;
+    font-size: 1.5rem;
+    align-items: center;
+    cursor: pointer;
+    transition: .3s ease;
+}
+.analizcontainer1 #ulke-listesi li:hover{
+    transition: .3s ease;
+    color: #0D4C3C;
 }
 .analizcontainer1 .metrik-butonlari {
     border: 1px solid var(--birincil-renk);
@@ -413,6 +481,10 @@ header{
     border-radius: 15px;
     padding: 0 3rem;
     position: relative;
+}
+#iklimAnalizGrafik {
+    width: 100%;
+    height: auto;
 }
 .analizcontainer3 {
     display: flex;
@@ -565,13 +637,3 @@ footer p {
   background-color: var(--ikincil-renk);
 }
 /*scroll bitiş*/
-#iklimAnalizGrafik {
-    width: 100%;
-    height: auto;
-}
-#iklimAnalizGrafik {
-    width: 100%;
-    height: auto;
-}
-/*yukardakinden iki tane var
-*/

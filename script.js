@@ -1,3 +1,4 @@
+/*dönüşüm grafik başlangıç*/
 async function carbongrafik() {
     const response = await fetch('https://global-warming.org/api/co2-api');
     const result = await response.json();
@@ -141,7 +142,8 @@ async function denizSeviyesiGrafik() {
 }
 denizSeviyesiGrafik();
 let myChart = null;
-
+/*dönüşüm grafik bitiş*/
+/*analiz başlangıç*/
 async function grafikGuncelle(metrik, etiket) {
 
     const response = await fetch('filtered_data.json');
@@ -189,3 +191,32 @@ async function grafikGuncelle(metrik, etiket) {
 }
 
 window.onload = () => grafikGuncelle("co2_per_capita", "Karbon İzi (Ton)");
+const searchUlke = document.getElementById("ulke-arama");
+const box = document.getElementById("ulke-listesi");
+const seçilenler = document.getElementById("secilen-ulkeler");
+const closeli = document.querySelectorAll(".closeli");
+
+searchUlke.addEventListener("click", () => {
+  box.classList.toggle("activelist");
+});
+
+searchUlke.addEventListener("input", () => {
+  const value = searchUlke.value.toLowerCase();
+  const lis = Array.from(box.querySelectorAll("li"));
+
+  lis.forEach(li => {
+    if(li.textContent.toLowerCase().startsWith(value)){
+      box.prepend(li); // sadece baş harf eşleşen öne gelir
+    }
+  });
+});
+box.addEventListener("click", () => {
+    const text = box.textContent;
+    seçilenler.classList.add("show")
+});
+closeli.forEach(cl => {
+  cl.addEventListener("click", () => {
+    seçilenler.classList.remove("show");
+  });
+});
+/*analiz bitiş*/
