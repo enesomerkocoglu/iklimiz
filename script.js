@@ -190,33 +190,83 @@ async function grafikGuncelle(metrik, etiket) {
     });
 }
 
-window.onload = () => grafikGuncelle("co2_per_capita", "Karbon İzi (Ton)");
-const searchUlke = document.getElementById("ulke-arama");
-const box = document.getElementById("ulke-listesi");
-const seçilenler = document.getElementById("secilen-ulkeler");
-const closeli = document.querySelectorAll(".closeli");
+window.onload = () => grafikGuncelle("co2_per_capita", "Türkiye");
 
-searchUlke.addEventListener("click", () => {
-  box.classList.toggle("activelist");
+const ulkeInputDOM = document.getElementById("ulke-arama");
+const ulkeDivDOM = document.getElementById("ulke-listesi");
+const ulkelerDOM = document.querySelectorAll(".li");
+const seçilenlerDivDOM = document.getElementById("secilen-ulkeler");
+
+// Ulke arama listesi açma/kapatma
+ulkeInputDOM.addEventListener("click", () => {
+  ulkeDivDOM.classList.toggle("activelist");
 });
 
-searchUlke.addEventListener("input", () => {
-  const value = searchUlke.value.toLowerCase();
-  const lis = Array.from(box.querySelectorAll("li"));
+// Arama ile öne getirme
+ulkeInputDOM.addEventListener("input", () => {
+  const value = ulkeInputDOM.value.toLowerCase();
+  const lis = Array.from(ulkeDivDOM.querySelectorAll(".li"));
 
   lis.forEach(li => {
-    if(li.textContent.toLowerCase().startsWith(value)){
-      box.prepend(li); // sadece baş harf eşleşen öne gelir
+    if (li.textContent.toLowerCase().startsWith(value)) {
+      ulkeDivDOM.prepend(li); // baş harf eşleşen öne gelir
     }
   });
 });
-box.addEventListener("click", () => {
-    const text = box.textContent;
-    seçilenler.classList.add("show")
-});
-closeli.forEach(cl => {
-  cl.addEventListener("click", () => {
-    seçilenler.classList.remove("show");
+
+let seçilenulke = [];
+let sayac = 1;
+
+// Ülke tıklama işlemleri
+for (let i = 0; i < ulkelerDOM.length; i++) {
+  ulkelerDOM[i].addEventListener("click", function () {
+    const ulke = this.innerText;
+
+    if (seçilenulke.includes(ulke)) return; // zaten seçilmişse
+    if (seçilenulke.length >= 3) return; // 3 seçim sınırı
+    
+    ulkeInputDOM.placeholder = "";
+
+    this.id = sayac;
+    sayac++;
+    seçilenulke.push(ulke);
+
+    let seçilen = `ID: ${this.id}  İsim: ${ulke}`;
+    console.log(seçilen);
+
+    // Tıklama sonrası divleri ekle
+    seçilenlerEkleme();
   });
-});
+}
+
+// Seçilen ülkeleri div olarak ekleme
+function seçilenlerEkleme() {
+  let result = ""; // her seferinde sıfırla
+  seçilenulke.forEach((item) => {
+    result += `
+      <div class="ulkeler" style="display: flex; flex-direction: row; background-color: #B0B0B0; padding: 2px; border-radius: 5px; justify-content: center; align-items: center; margin: 2px 0;">
+        <img class="closeli" style="height: 1.4rem; width: auto; cursor: pointer;" src="gorsel/close.svg" alt="">
+        <p class="ulke" style="font-size: 1.3rem; color: white; padding: 0 2px 2.5px 0; border-radius: 5px; cursor: default;">${item}</p>
+      </div>
+    `;
+  });
+
+  seçilenlerDivDOM.innerHTML = result;
+
+  // Close ikonlarına tıklama ile silme özelliği ekleme
+  const closeler = seçilenlerDivDOM.querySelectorAll(".closeli");
+  closeler.forEach((btn, index) => {
+    btn.addEventListener("click", () => {
+      // Seçilen ülkeden çıkar
+      if (seçilenulke.length === 1) return;
+
+      seçilenulke.splice(index, 1);
+      // Divleri tekrar oluştur
+      seçilenlerEkleme();
+    });
+  });
+}
+const metrikButtonDOM = document.querySelectorAll("button");
+ metrikButtonDOM.classList
+
 /*analiz bitiş*/

@@ -357,42 +357,18 @@ header{
     color: black;
     font-size: 1.5rem;
 }
-#secilen-ulkeler {
-    display: none;
-}
-#secilen-ulkeler.show{
+#secilen-ulkeler{
     height: 2rem;
     width: auto;
     position: absolute;
     z-index: 111;
-    top: 3.5rem;
+    top: 3.3rem;
     right: .5rem;
     display: grid;
     grid-template-columns: auto auto auto;
     gap: 3px;
 }
-.ulkeler {
-    display: flex;
-    flex-direction: row;
-    background-color: #B0B0B0;
-    padding: 2px;
-    border-radius: 5px;
-    justify-content: center;
-    align-items: center;
-}
-.ulkeler img {
-    height: 1.4rem;
-    width: auto;
-    cursor: pointer;
-}
-#secilen-ulkeler p {
-    font-size: 1.3rem;
-    color: var(--arka-plan-rengi);
-    background-color: #B0B0B0;
-    padding: 0 2px 2.5px 0;
-    border-radius: 5px;
-    cursor: default;
-}
+
 .analizcontainer1 #ulke-listesi{
     height: 0;
     overflow: hidden;
