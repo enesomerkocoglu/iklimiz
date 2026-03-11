@@ -144,6 +144,7 @@ denizSeviyesiGrafik();
 let myChart = null;
 /*dönüşüm grafik bitiş*/
 /*analiz başlangıç*/
+let ulkeVerisi = {};//global
 async function grafikGuncelle(metrik, etiket) {
 
     const response = await fetch('filtered_data.json');
@@ -189,8 +190,6 @@ async function grafikGuncelle(metrik, etiket) {
         
     });
 }
-
-window.onload = () => grafikGuncelle("co2_per_capita", "Türkiye");
 
 const ulkeInputDOM = document.getElementById("ulke-arama");
 const ulkeDivDOM = document.getElementById("ulke-listesi");
@@ -266,7 +265,30 @@ function seçilenlerEkleme() {
     });
   });
 }
-const metrikButtonDOM = document.querySelectorAll("button");
- metrikButtonDOM.classList
+const buttons = document.querySelectorAll("button");
+let seçilenbutton = "co2_per_capita";
+ 
+buttons.forEach(button => {
+  button.addEventListener("click", function() {
+
+    // Önce hepsinden class kaldır
+    buttons.forEach(btn => btn.classList.remove("active"));
+
+    // Tıklanan butona ekle
+    button.classList.add("active");
+
+    
+    seçilenbutton = button.id
+    console.log(seçilenbutton);
+      // seçilen buton id'sini güncelle
+    seçilenbutton = this.id;
+    console.log("Seçilen metrik:", seçilenbutton);
+
+    // tıklayınca grafiği güncelle
+    grafikGuncelle(seçilenbutton, "Türkiye");
+  });
+});
+window.onload = () => grafikGuncelle(seçilenbutton, "Türkiye");
+console.log(grafikGuncelle(seçilenbutton, "Türkiye"));
 
 /*analiz bitiş*/
