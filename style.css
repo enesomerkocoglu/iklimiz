@@ -172,15 +172,16 @@ header{
     text-align: start;
 }
 .procontainer2{
-    height: 100vh;
+    height: 92vh;
     width: 53%;
-    padding-top: 10rem ;
+    margin-top: 8rem;
     background-color: var(--ikincil-renk);
     display: flex;
     flex-direction: column;
     gap: 1rem;
     justify-content: center;
     align-items: center;
+    border-radius: 10px;
 }
 .procontainer2 div {
     height: 27rem;
@@ -312,7 +313,7 @@ header{
     flex-direction: column;
     background-color: var(--arka-plan-rengi);
     padding: 10rem 5.2rem;
-    gap: 1.5rem;
+    gap: 5rem;
 }
 .analiz .başlık h1 {
     font-size: 3rem;
@@ -328,7 +329,7 @@ header{
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
     width: auto;
     border-radius: 15px;
-    padding: 0 3rem;
+    padding: 0 10rem;
 }
 .analizcontainer1 h2 {
     font-size: 1.6rem;
@@ -337,7 +338,7 @@ header{
     padding-bottom: .5rem;
 }
 .ulkediv {
-    width: 25.5rem;
+    width: 30.5rem;
     height: auto;
     z-index: 100;
     position: relative;
@@ -345,7 +346,7 @@ header{
 .analizcontainer1 #ulke-arama {
     border: 1px solid var(--birincil-renk);
     border-radius:10px 10px 0 0 ;
-    height: 4rem;
+    height: 5rem;
     width: 100%;
     background-color: var(--arka-plan-rengi);
     outline: none;
@@ -362,7 +363,7 @@ header{
     width: auto;
     position: absolute;
     z-index: 111;
-    top: 3.3rem;
+    top: 4rem;
     right: .5rem;
     display: grid;
     grid-template-columns: auto auto auto;
@@ -401,7 +402,7 @@ header{
 .analizcontainer1 .metrik-butonlari {
     border: 1px solid var(--birincil-renk);
     border-radius: 20px;
-    height: 4rem;
+    height: 5rem;
     width: auto;
     display: flex;
     justify-content: space-between;
@@ -419,7 +420,7 @@ header{
     font-size: 1.5rem;
     font-weight: 600;
     cursor: pointer;
-    border-radius: 20px;
+    border-radius: 17px;
     outline: none;
     transition: .3s ease;
 }
@@ -428,30 +429,11 @@ header{
     background-color: var(--birincil-renk);
     color: var(--arka-plan-rengi);
 }
-.analizcontainer1 .yılaralığı  {
-    height: 4rem;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.analizcontainer1 .yılaralığı input {
-    appearance: none;
-    width: 100%;
-    height: 4px;
-    background-color: var(--birincil-renk);
-}
-.analizcontainer1 .yılaralığı .minrage {
-    padding-right: 2rem;
-}
-.analizcontainer1 .yılaralığı .maxrage {
-    padding-left: 2rem;
-}
 .analizcontainer2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 48vh;
+    height: 51vh;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
     width: 100%;
     border-radius: 15px;
@@ -461,33 +443,6 @@ header{
 #iklimAnalizGrafik {
     width: 100%;
     height: auto;
-}
-.analizcontainer3 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
-    height: 15vh;
-    width: 100%;   
-
-}
-.analizcontainer3 div {
-    height: 100%;
-    width: 25%;
-    border-radius: 15px;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
-    padding: 3rem 3rem;
-}
-.analizcontainer3 div h1 {
-    font-size: 3rem;
-    font-weight: 700;
-    color: var(--ikincil-renk); 
-    margin-bottom: 1rem;  
-}
-.analizcontainer3 div h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: var(--üçüncül-renk);
 }
 /*analiz bitiş*/
 /*footer başlangıç*/
@@ -524,12 +479,12 @@ footer p {
     font-size: 3rem;
     font-weight: 700;
     color: var(--üçüncül-renk);
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
 }
 .footercontainer1 .verikaynaklari {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     height: 15rem;
     width: 100%;
 
@@ -543,11 +498,17 @@ footer p {
     width: 30%;
     border-top: 2px solid var(--üçüncül-renk);
 }
-.footercontainer1 .verikaynaklari div h2 {
+.footercontainer1 .verikaynaklari div a {
     font-size: 2.5rem;
     font-weight: 600;
     color: var(--arka-plan-rengi);
     text-align: center;
+    text-decoration: none;
+    transition: .3s ease;
+}
+.footercontainer1 .verikaynaklari div a:hover{
+    transition: .3s ease;
+    color: #DAA520;
 }
 .footercontainer1 .verikaynaklari div #nasa {
     width: 10rem;
@@ -557,11 +518,6 @@ footer p {
     width: 6rem;
     height: auto;
     margin: 2.3rem 0;
-}
-.footercontainer1 .verikaynaklari div #iea {
-    width: 7rem;
-    height: auto;
-    margin: 1.5rem 0;
 }
 .footercontainer2 {
     height: 100%;
@@ -599,17 +555,5 @@ footer p {
 .footercontainer2 div a img {
     margin-right: 2rem;
 }
-
 /*footer bitiş*/
-/*scroll başlancıç*/
-::-webkit-scrollbar{
-    width: 8px;
-}
-::-webkit-scrollbar-thumb {
-  background-color: var(--birincil-renk);
-  border-radius: 10px;
-}
-::-webkit-scrollbar-track {
-  background-color: var(--ikincil-renk);
-}
-/*scroll bitiş*/
+

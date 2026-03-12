@@ -141,154 +141,144 @@ async function denizSeviyesiGrafik() {
     });
 }
 denizSeviyesiGrafik();
-let myChart = null;
+
 /*dönüşüm grafik bitiş*/
 /*analiz başlangıç*/
-let ulkeVerisi = {};//global
-async function grafikGuncelle(metrik, etiket) {
 
-    const response = await fetch('filtered_data.json');
-    const data = await response.json();
-
-    const ulkeVerisi = data["TUR"];
-
-    const yillar = Object.keys(ulkeVerisi);
-    const degerler = yillar.map(yil => ulkeVerisi[yil][metrik]);
-
-    const ctx = document.getElementById("iklimAnalizGrafik").getContext("2d");
-
-    if (myChart) {
-        myChart.destroy();
-    }
-
-    myChart = new Chart(ctx, {
-        type: "line",
-        data: {
-            labels: yillar,
-            datasets: [{
-                label: etiket,
-                data: degerler,
-                backgroundColor: "#DAA520",
-                borderColor: "#DAA520",
-                borderWidth: 2,
-                tension: .3, 
-            }]
-        },
-        options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            scales: {
-                x: {
-                    grid: { display: false }
-                },
-                y: {
-                    grid: { color: 'rgba(0,0,0,0.1)' }
-                }
-            }
-        },
-        
-        
-    });
-}
-
+// HTML'de id'si olan elementleri seçiyoruz
 const ulkeInputDOM = document.getElementById("ulke-arama");
 const ulkeDivDOM = document.getElementById("ulke-listesi");
 const ulkelerDOM = document.querySelectorAll(".li");
 const seçilenlerDivDOM = document.getElementById("secilen-ulkeler");
+const buttons = document.querySelectorAll("button");
+let seçilenbutton = "co2_per_capita"; // varsayılan metrik
+let myChart = null;
 
-// Ulke arama listesi açma/kapatma
+// Renkler (3 ülke için)
+const renkler = ["#DAA520", "#0D4C3C", "#1A1A2E"];
+
+// Seçilen ülkeler: her biri {ad: "Türkiye", kod: "TUR"} şeklinde
+let seçilenulke = [];
+
+// JSON verisini bir kere yükle
+let tumData = null;
+fetch("filtered_data.json")
+  .then(res => res.json())
+  .then(data => {
+    tumData = data;
+    // sayfa açılınca varsayılan Türkiye grafiği
+    seçilenulke.push({ad: "Türkiye", kod: "TUR"});
+    grafikGuncelle();
+    seçilenlerEkleme();
+  });
+
+// Ulke listesi aç/kapa
 ulkeInputDOM.addEventListener("click", () => {
   ulkeDivDOM.classList.toggle("activelist");
 });
 
-// Arama ile öne getirme
+// Arama yapınca baş harfe göre öne taşı
 ulkeInputDOM.addEventListener("input", () => {
   const value = ulkeInputDOM.value.toLowerCase();
-  const lis = Array.from(ulkeDivDOM.querySelectorAll(".li"));
-
-  lis.forEach(li => {
-    if (li.textContent.toLowerCase().startsWith(value)) {
-      ulkeDivDOM.prepend(li); // baş harf eşleşen öne gelir
+  ulkeDivDOM.querySelectorAll(".li").forEach(li => {
+    if(li.textContent.toLowerCase().startsWith(value)) {
+      ulkeDivDOM.prepend(li);
     }
   });
 });
 
-let seçilenulke = [];
-let sayac = 1;
+// Ülke seçme
+ulkelerDOM.forEach(li => {
+  li.addEventListener("click", function() {
+    const ulkeAdi = this.innerText;
+    const ulkeKodu = this.dataset.value;
 
-// Ülke tıklama işlemleri
-for (let i = 0; i < ulkelerDOM.length; i++) {
-  ulkelerDOM[i].addEventListener("click", function () {
-    const ulke = this.innerText;
+    if(seçilenulke.find(u => u.ad === ulkeAdi)) return; // zaten seçilmiş
+    if(seçilenulke.length >= 3) return; // max 3 ülke
 
-    if (seçilenulke.includes(ulke)) return; // zaten seçilmişse
-    if (seçilenulke.length >= 3) return; // 3 seçim sınırı
-    
-    ulkeInputDOM.placeholder = "";
-
-    this.id = sayac;
-    sayac++;
-    seçilenulke.push(ulke);
-
-    let seçilen = `ID: ${this.id}  İsim: ${ulke}`;
-    console.log(seçilen);
-
-    // Tıklama sonrası divleri ekle
+    seçilenulke.push({ad: ulkeAdi, kod: ulkeKodu});
     seçilenlerEkleme();
-  });
-}
-
-// Seçilen ülkeleri div olarak ekleme
-function seçilenlerEkleme() {
-  let result = ""; // her seferinde sıfırla
-  seçilenulke.forEach((item) => {
-    result += `
-      <div class="ulkeler" style="display: flex; flex-direction: row; background-color: #B0B0B0; padding: 2px; border-radius: 5px; justify-content: center; align-items: center; margin: 2px 0;">
-        <img class="closeli" style="height: 1.4rem; width: auto; cursor: pointer;" src="gorsel/close.svg" alt="">
-        <p class="ulke" style="font-size: 1.3rem; color: white; padding: 0 2px 2.5px 0; border-radius: 5px; cursor: default;">${item}</p>
-      </div>
-    `;
-  });
-
-  seçilenlerDivDOM.innerHTML = result;
-
-  // Close ikonlarına tıklama ile silme özelliği ekleme
-  const closeler = seçilenlerDivDOM.querySelectorAll(".closeli");
-  closeler.forEach((btn, index) => {
-    btn.addEventListener("click", () => {
-      // Seçilen ülkeden çıkar
-      if (seçilenulke.length === 1) return;
-
-      seçilenulke.splice(index, 1);
-      // Divleri tekrar oluştur
-      seçilenlerEkleme();
-    });
-  });
-}
-const buttons = document.querySelectorAll("button");
-let seçilenbutton = "co2_per_capita";
- 
-buttons.forEach(button => {
-  button.addEventListener("click", function() {
-
-    // Önce hepsinden class kaldır
-    buttons.forEach(btn => btn.classList.remove("active"));
-
-    // Tıklanan butona ekle
-    button.classList.add("active");
-
-    
-    seçilenbutton = button.id
-    console.log(seçilenbutton);
-      // seçilen buton id'sini güncelle
-    seçilenbutton = this.id;
-    console.log("Seçilen metrik:", seçilenbutton);
-
-    // tıklayınca grafiği güncelle
-    grafikGuncelle(seçilenbutton, "Türkiye");
+    grafikGuncelle();
   });
 });
-window.onload = () => grafikGuncelle(seçilenbutton, "Türkiye");
-console.log(grafikGuncelle(seçilenbutton, "Türkiye"));
 
-/*analiz bitiş*/
+// Seçilen ülkeleri gösterme ve silme
+function seçilenlerEkleme() {
+  seçilenlerDivDOM.innerHTML = "";
+
+  seçilenulke.forEach((ulke, index) => {
+    const div = document.createElement("div");
+    div.className = "ulkeler";
+    div.style = "display:flex; flex-direction:row; background:#B0B0B0; padding:2px; border-radius:5px; margin:2px 0; align-items:center;";
+    
+    const img = document.createElement("img");
+    img.src = "gorsel/close.svg";
+    img.style = "height:1.4rem; cursor:pointer;";
+    img.addEventListener("click", () => {
+      seçilenulke.splice(index,1);
+      seçilenlerEkleme();
+      grafikGuncelle();
+    });
+
+    const p = document.createElement("p");
+    p.textContent = ulke.ad;
+    p.style = "font-size:1.3rem; color:white; padding:0 2px;";
+
+    div.appendChild(img);
+    div.appendChild(p);
+    seçilenlerDivDOM.appendChild(div);
+  });
+}
+
+// Butonlara tıklayınca metrik değişsin
+buttons.forEach(button => {
+  button.addEventListener("click", function() {
+    buttons.forEach(btn => btn.classList.remove("active"));
+    this.classList.add("active");
+    seçilenbutton = this.id;
+    grafikGuncelle();
+  });
+});
+
+// Grafik çizme fonksiyonu
+function grafikGuncelle() {
+  if(!tumData || seçilenulke.length === 0) return;
+
+  const ctx = document.getElementById("iklimAnalizGrafik").getContext("2d");
+
+  const datasets = seçilenulke.map((ulke, index) => {
+    const ulkeVerisi = tumData[ulke.kod];
+    const yillar = Object.keys(ulkeVerisi);
+    const degerler = yillar.map(yil => ulkeVerisi[yil][seçilenbutton]);
+    const renk = renkler[index % renkler.length];
+
+    return {
+      label: ulke.ad,
+      data: degerler,
+      borderColor: renk,
+      backgroundColor: renk,
+      borderWidth: 2,
+      tension: 0.3
+    };
+  });
+
+  const yillar = Object.keys(tumData[seçilenulke[0].kod]);
+
+  if(myChart) myChart.destroy();
+
+  myChart = new Chart(ctx, {
+    type: "line",
+    data: {
+      labels: yillar,
+      datasets: datasets
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      scales: {
+        x: { grid: { display: false } },
+        y: { grid: { color: "rgba(0,0,0,0.1)" } }
+      }
+    }
+  });
+}
