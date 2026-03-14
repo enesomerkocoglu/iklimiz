@@ -203,10 +203,12 @@ function seçilenlerEkleme() {
     img.src = "gorsel/close.svg";
     img.style = "height:1.4rem; cursor:pointer;";
     img.addEventListener("click", () => {
-      seçilenulke.splice(index,1);
+    if(seçilenulke.length > 1){
+      seçilenulke.splice(index , 1);
       seçilenlerEkleme();
       grafikGuncelle();
-    });
+    }
+});
 
     const p = document.createElement("p");
     p.textContent = ulke.ad;
