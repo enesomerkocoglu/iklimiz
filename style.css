@@ -17,7 +17,8 @@ html,body{
 }
 /*header başlangıç*/
 header{
-    height: 8rem;
+    max-height: 8rem;
+    height: 100%;
     width: 100%;
     background-color: var(--birincil-renk);
     display: flex;
@@ -40,8 +41,7 @@ header{
     gap: 10rem;
 }
 .headerul li{
-    font-size: 2rem;
-    
+    font-size: 2rem;  
 }
 .headerul li a{
     color: var(--arka-plan-rengi);
@@ -62,22 +62,22 @@ header{
 /*header bitiş*/
 /*anasayfa başlangıç*/
 .anasayfa{
-    height: auto;
     width: 100%;
+    max-height: 83.3vh;
+    height: 100%;
     display: flex;
-    justify-items: center;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding-bottom: 30.8vh;
 }
-.anasayfa .anacontainer1 {
+.anasayfa .anacontainer1{
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
+    max-width: 90rem;
     flex-direction: column;
-    width: 50%;
-    height: 58vh;
-    padding-top: 18vh;  
+    width: 100%;
+    margin-bottom: 10rem;
 }
 .anasayfa .anacontainer1 h1{
     font-size: 6rem;
@@ -122,7 +122,8 @@ header{
 /*anasayfa bitiş*/
 /*problem başlangıç*/
 .problem {
-    height: auto;
+    max-height: 100vh;
+    height: 100%;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -130,15 +131,15 @@ header{
     background-color: var(--arka-plan-rengi);
 }
 .procontainer1{
-    height: 100%;
-    width: 43.5%;
+    height: auto;
+    max-width: 81rem;
+    width: 100%;
     display: grid;
     grid-template-rows: auto auto auto;
     padding-left: 3rem;
     padding-top: 8rem;
     background-color: var(--arka-plan-rengi);
 }
-
 .procontainer1 .proh1 {
     font-size: 3rem;
     font-weight: 700;
@@ -172,9 +173,11 @@ header{
     text-align: start;
 }
 .procontainer2{
-    height: 92vh;
-    width: 53%;
+    height: auto;
+    width: 100%;
+    max-width: 100rem;
     margin-top: 8rem;
+    padding-top: 2.7rem;
     background-color: var(--ikincil-renk);
     display: flex;
     flex-direction: column;
@@ -184,29 +187,29 @@ header{
     border-radius: 10px;
 }
 .procontainer2 div {
-    height: 27rem;
-    width: 60rem;
+    height: 100%;
+    width: 60%;
     background-color: var(--arka-plan-rengi);
     display: flex;
     justify-content: center;
     border-radius: 10px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
     transition: .3s ease;
-
 }
-
 /*problem bitiş*/
 /*dönüşüm başlangıç*/
 .donusum {
-    height: auto;
+    max-height: 89vh;
+    height: 100%;
     width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
     background-color: var(--arka-plan-rengi);
+    padding-top: 10rem;
 }
 .donuscontainer1{
-    height: 100vh;
+    height: auto;
     width: 45%;
     background-color: var(--arka-plan-rengi);
     padding: 14rem 5.2rem 8rem 5.2rem;
@@ -242,14 +245,15 @@ header{
     text-align: start; 
 }
 .donuscontainer2{
-    height: 55vh;
+    max-height: 55vh;
+    height: 100%;
     width: 40%;
     background-color: var(--birincil-renk);
     display: grid;
     grid-template-rows: auto auto;
     position: relative;
     margin-left: 15rem;
-    margin-top: 7rem;
+    margin-top: 10rem;
     border-radius: 15px;
     padding: 9rem 10rem 11rem 10rem;
     gap: 5rem;
@@ -262,7 +266,7 @@ header{
     margin-bottom: .5rem;
 }
 .donuscontainer2 .div1{
-    width: 100%;
+    width: auto;
     height: 70%;
     background-color: var(--arka-plan-rengi);
     position: relative;
@@ -307,12 +311,13 @@ header{
 /*dönüşüm bitiş*/
 /*analiz başlangıç*/
 .analiz {
-    height: auto;
+    max-height: 100vh;
+    height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
     background-color: var(--arka-plan-rengi);
-    padding: 10rem 5.2rem;
+    padding: 10rem 5.2rem 0 5.2rem;
     gap: 5rem;
 }
 .analiz .başlık h1 {
@@ -325,7 +330,8 @@ header{
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
-    height: 15vh;
+    max-height: 15vh;
+    height: 100%;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
     width: auto;
     border-radius: 15px;
@@ -338,7 +344,8 @@ header{
     padding-bottom: .5rem;
 }
 .ulkediv {
-    width: 30.5rem;
+    max-width: 30.5rem;
+    width: 100%;
     height: auto;
     z-index: 100;
     position: relative;
@@ -346,7 +353,8 @@ header{
 .analizcontainer1 #ulke-arama {
     border: 1px solid var(--birincil-renk);
     border-radius:10px 10px 0 0 ;
-    height: 5rem;
+    max-height: 5rem;
+    height: 100%;
     width: 100%;
     background-color: var(--arka-plan-rengi);
     outline: none;
@@ -359,7 +367,8 @@ header{
     font-size: 1.5rem;
 }
 #secilen-ulkeler{
-    height: 2rem;
+    max-height: 2rem;
+    height: 100%;
     width: auto;
     position: absolute;
     z-index: 111;
@@ -369,9 +378,8 @@ header{
     grid-template-columns: auto auto auto;
     gap: 3px;
 }
-
 .analizcontainer1 #ulke-listesi{
-    height: 0;
+    height: 0%;
     overflow: hidden;
     transition: .3s ease ;
     display: flex;
@@ -402,7 +410,8 @@ header{
 .analizcontainer1 .metrik-butonlari {
     border: 1px solid var(--birincil-renk);
     border-radius: 20px;
-    height: 5rem;
+    max-height: 5rem;
+    height: 100%;
     width: auto;
     display: flex;
     justify-content: space-between;
@@ -433,11 +442,11 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 51vh;
+    max-height: 51vh;
+    height: 100%;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
     width: 100%;
     border-radius: 15px;
-    padding: 0 3rem;
     position: relative;
 }
 #iklimAnalizGrafik {
@@ -447,11 +456,11 @@ header{
 /*analiz bitiş*/
 /*footer başlangıç*/
 footer {
-    width: auto;
-    height: 40rem;
+    width: 100%;
+    max-height: 40rem;
+    height: 100%;
     background-color: var(--birincil-renk);
     padding: 5rem;
-    margin-top: 5rem;
     display: flex;
     justify-content: start;
     align-items: center;
@@ -465,7 +474,8 @@ footer p {
 .footer {
     display: flex;
     flex-direction: row;
-    height: 20rem;
+    max-height: 20rem;
+    height: 100%;
     width: 100%;
     gap: 10%;
     margin-bottom: 10rem;
@@ -485,9 +495,9 @@ footer p {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    height: 15rem;
+    max-height: 15rem;
+    height: 100%;
     width: 100%;
-
 }
 .footercontainer1 .verikaynaklari div {
     display: flex;
@@ -536,7 +546,8 @@ footer p {
     margin-bottom: 1rem;
 }
 .footercontainer2 div {
-    height: 5rem;
+    max-height: 12rem;
+    height: 100%;
     width: 100%;
     display: flex;
     align-items: center;

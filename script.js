@@ -3,7 +3,7 @@ async function carbongrafik() {
     const response = await fetch('https://global-warming.org/api/co2-api');
     const result = await response.json();
     const Data = result.co2; 
-
+    
     const labels = Data.map(item => `${item.year}-${item.month}`);
     const dataPoints = Data.map(item => item.cycle); 
 
@@ -20,6 +20,7 @@ async function carbongrafik() {
             }]
         },
         options: {
+            maintainAspectRatio: false,
             responsive: true,
             plugins: {
                 legend: { display: false } 
@@ -48,7 +49,6 @@ async function carbongrafik() {
         }
     });
 }
-
 carbongrafik();
 async function ısınmaendeksi() {
     const response = await fetch('https://global-warming.org/api/temperature-api');
@@ -71,6 +71,7 @@ async function ısınmaendeksi() {
             }]
         },
         options: {
+            maintainAspectRatio: false,
             responsive: true,
             plugins: {
                 legend: { display: false } 
@@ -98,18 +99,14 @@ async function ısınmaendeksi() {
             }
         }
     })
-
 }
 ısınmaendeksi();
 async function denizSeviyesiGrafik() {
     //apı url hatasından dolyı grafiklerden verileri alıp manuel olarak işledim
     const labels = [1993, 1997, 2000, 2004, 2008, 2012, 2016, 2020, 2024 ,2025];
-
-
     const dataPoints = [0, 12, 21, 35, 48, 62, 78, 92, 101, 105];
 
     const canva = document.getElementById('denizcanvas').getContext('2d');
-
     new Chart(canva, {
         type: 'line',
         data: {
@@ -119,10 +116,10 @@ async function denizSeviyesiGrafik() {
                 borderColor: 'rgba(244, 241, 235, 1)', 
                 backgroundColor: '#1A1A2E', 
                 fill: true, 
-
             }]
         },
         options: {
+            maintainAspectRatio: false,
             responsive: true,
             plugins: {
                 legend: { display: false }
@@ -141,43 +138,36 @@ async function denizSeviyesiGrafik() {
     });
 }
 denizSeviyesiGrafik();
-
 /*dönüşüm grafik bitiş*/
 /*analiz başlangıç*/
-
-// HTML'de id'si olan elementleri seçiyoruz
 const ulkeInputDOM = document.getElementById("ulke-arama");
 const ulkeDivDOM = document.getElementById("ulke-listesi");
 const ulkelerDOM = document.querySelectorAll(".li");
 const seçilenlerDivDOM = document.getElementById("secilen-ulkeler");
 const buttons = document.querySelectorAll("button");
-let seçilenbutton = "co2_per_capita"; // varsayılan metrik
+
+let seçilenbutton = "co2_per_capita";
 let myChart = null;
 
-// Renkler (3 ülke için)
 const renkler = ["#DAA520", "#0D4C3C", "#1A1A2E"];
 
 // Seçilen ülkeler: her biri {ad: "Türkiye", kod: "TUR"} şeklinde
 let seçilenulke = [];
 
-// JSON verisini bir kere yükle
 let tumData = null;
 fetch("filtered_data.json")
   .then(res => res.json())
   .then(data => {
     tumData = data;
-    // sayfa açılınca varsayılan Türkiye grafiği
     seçilenulke.push({ad: "Türkiye", kod: "TUR"});
     grafikGuncelle();
     seçilenlerEkleme();
   });
-
-// Ulke listesi aç/kapa
+//ulke div açılma
 ulkeInputDOM.addEventListener("click", () => {
   ulkeDivDOM.classList.toggle("activelist");
 });
-
-// Arama yapınca baş harfe göre öne taşı
+//ulke arama filtre
 ulkeInputDOM.addEventListener("input", () => {
   const value = ulkeInputDOM.value.toLowerCase();
   ulkeDivDOM.querySelectorAll(".li").forEach(li => {
@@ -186,23 +176,21 @@ ulkeInputDOM.addEventListener("input", () => {
     }
   });
 });
-
 // Ülke seçme
 ulkelerDOM.forEach(li => {
   li.addEventListener("click", function() {
     const ulkeAdi = this.innerText;
     const ulkeKodu = this.dataset.value;
 
-    if(seçilenulke.find(u => u.ad === ulkeAdi)) return; // zaten seçilmiş
-    if(seçilenulke.length >= 3) return; // max 3 ülke
+    if(seçilenulke.find(u => u.ad === ulkeAdi)) return;
+    if(seçilenulke.length >= 3) return;
 
     seçilenulke.push({ad: ulkeAdi, kod: ulkeKodu});
     seçilenlerEkleme();
     grafikGuncelle();
   });
 });
-
-// Seçilen ülkeleri gösterme ve silme
+// Seçilen ülkele gösterme ve sil
 function seçilenlerEkleme() {
   seçilenlerDivDOM.innerHTML = "";
 
@@ -229,8 +217,7 @@ function seçilenlerEkleme() {
     seçilenlerDivDOM.appendChild(div);
   });
 }
-
-// Butonlara tıklayınca metrik değişsin
+//metrik değiş
 buttons.forEach(button => {
   button.addEventListener("click", function() {
     buttons.forEach(btn => btn.classList.remove("active"));
@@ -239,8 +226,7 @@ buttons.forEach(button => {
     grafikGuncelle();
   });
 });
-
-// Grafik çizme fonksiyonu
+// Grafik çizme
 function grafikGuncelle() {
   if(!tumData || seçilenulke.length === 0) return;
 
