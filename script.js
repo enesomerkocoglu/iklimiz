@@ -193,12 +193,10 @@ ulkelerDOM.forEach(li => {
 // Seçilen ülkele gösterme ve sil
 function seçilenlerEkleme() {
   seçilenlerDivDOM.innerHTML = "";
-
   seçilenulke.forEach((ulke, index) => {
     const div = document.createElement("div");
     div.className = "ulkeler";
     div.style = "display:flex; flex-direction:row; background:#B0B0B0; padding:2px; border-radius:5px; margin:2px 0; align-items:center;";
-    
     const img = document.createElement("img");
     img.src = "gorsel/close.svg";
     img.style = "height:1.4rem; cursor:pointer;";
@@ -209,11 +207,9 @@ function seçilenlerEkleme() {
       grafikGuncelle();
     }
 });
-
     const p = document.createElement("p");
     p.textContent = ulke.ad;
     p.style = "font-size:1.3rem; color:white; padding:0 2px;";
-
     div.appendChild(img);
     div.appendChild(p);
     seçilenlerDivDOM.appendChild(div);
