@@ -129,17 +129,7 @@ header{
     flex-direction: row;
     justify-content: space-between;
     background-color: var(--arka-plan-rengi);
-}
-.procontainer1{
-    height: auto;
-    max-width: 81rem;
-    width: 100%;
-    display: grid;
-    grid-template-rows: auto, auto, auto;
-    padding-left: 3rem;
     padding-top: 8rem;
-    background-color: var(--arka-plan-rengi);
-    gap: .5rem;
 }
 .procontainer1 .proh1 {
     font-size: 3rem;
@@ -147,59 +137,60 @@ header{
     color: var(--birincil-renk);
     margin-left: 2.2rem;
 }
-.procontainer1 .prodiv {
-    max-height: 26rem;
+.procontainer1{
+    padding-top: 9rem;
+    max-height:92vh;
     height: 100%;
-    padding: 2rem;
-    border-radius: 15px;
-    background-color: var(--arka-plan-rengi);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 2rem;
+    padding: 1rem 2rem;
     position: relative;
 }
-.procontainer1 h1 {
+.procontainer1 .prodiv1 {
+    display: flex;
+    flex-direction: row;
+    height: 80%;
+    width: 100%;
+}
+.procontainer1 .prodiv2 {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--arka-plan-rengi);
+    width: 50%;
+    border-radius: 15px 0 0 15px ;
+    padding: 1.5rem;
+    height: 100%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+.procontainer1 .prodiv2 h1 {
     font-size: 3.5rem;
     font-weight: 700;
     color: var(--ikincil-renk);
 }
-.procontainer1 h2 {
+.procontainer1 .prodiv2 h2 {
     font-size: 2.5rem;
     font-weight: 800;
     color: var(--üçüncül-renk);
     margin-top: 0.5rem;
 }
-.procontainer1 p {
+.procontainer1 .prodiv2 p {
     font-size: 2rem;
     font-weight: 500;
     color: var(--metin-rengi);
     margin-top: 0.5rem;
     text-align: start;
 }
-.procontainer2{
-    height: auto;
-    width: 100%;
-    max-width: 100rem;
-    margin-top: 8rem;
-    padding-top: 4rem;
-    background-color: var(--ikincil-renk);
-    display: flex;
-    flex-direction: column;
-    gap: 1.7rem;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px 0 0 10px;
-    position: relative;
-    padding-left:2rem;
-}
-.procontainer2 div {
-    max-height: 26rem;
+.procontainer1 .prograf {
+    border-radius:  0 15px 15px 0  ;
     height: 100%;
-    width: 60%;
-    background-color: var(--arka-plan-rengi);
-    display: flex;
-    justify-content: center;
-    border-radius: 10px;
+    width: 50%;
+    background-color: var(--ikincil-renk);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-    transition: .3s ease;
+    padding: 0 1rem;
 }
 /*problem bitiş*/
 /*dönüşüm başlangıç*/
@@ -574,16 +565,13 @@ footer p {
 /*footer bitiş*/
 /*media etiketleri başlangıç*/
 @media (max-width: 1380px) {
-.procontainer1 p {
+.procontainer1 .prodiv2 p {
     font-size: 1.7rem;
-}
-.procontainer2 div {
-    width: 70%;
 }
 }
 /*media etiketleri bitiş*/
 @media (max-width: 1097px) {
-    header{
+header{
     padding: 0 2rem;
 }
 .headerul{
@@ -599,14 +587,11 @@ footer p {
 .anasayfa .anacontainer1 p{
     font-size: 1.7rem;
 }
-.procontainer1 h1 {
+.procontainer1 .prodiv2 h1 {
     font-size: 3rem;
 }
-.procontainer1 h2 {
+.procontainer1 .prodiv2 h2 {
     font-size: 2rem;
-}
-.procontainer2 div {
-    width: 75%;
 }
 .donuscontainer2{
     width: 45%;
@@ -633,4 +618,7 @@ footer p {
 .footercontainer1 .verikaynaklari div a {
     font-size: 2rem;
 }
+}
+@media (max-width: 830px){
+    
 }

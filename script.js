@@ -14,7 +14,7 @@ async function carbongrafik() {
             labels: labels,
             datasets: [{
                 data: dataPoints,
-                borderColor: '#1A1A2E',
+                borderColor: ' rgba(244, 241, 235, .8)',
                 backgroundColor: 'rgba(244, 241, 235, 1)',
                 borderWidth: 1
             }]
@@ -27,24 +27,13 @@ async function carbongrafik() {
             },
             scales: {
                 x: {
-                    ticks: {
-                        color: 'black', 
-                        font: {
-                            size: 12,   
-                        }
-                    },
-                    grid: {
-                        display: false 
-                    }
+                    ticks: { color: 'rgba(244, 241, 235, .6)' }, 
+                    grid: { display: false }
                 },
                 y: {
-                    ticks: {
-                        color: 'black',
-                        font: {
-                            size: 12,
-                        }
-                    }
-                }
+                    ticks: { color: 'rgba(244, 241, 235, .6)' },
+                    grid: { color: 'rgba(244, 241, 235, .6)' }
+                } 
             }
         }
     });
@@ -65,7 +54,7 @@ async function ısınmaendeksi() {
             labels: labels,
             datasets: [{
                 data: values,
-                borderColor: 'rgba(0,0,0,1)',
+                borderColor: 'rgba(244, 241, 235, 1)',
                 backgroundColor: 'white',
                 borderWidth: 1
             }]
@@ -78,25 +67,14 @@ async function ısınmaendeksi() {
             },
             scales: {
                 x: {
-                    ticks: {
-                        color: 'black', 
-                        font: {
-                            size: 12,   
-                        }
-                    },
-                    grid: {
-                        display: false 
-                    }
+                    ticks: { color: 'rgba(244, 241, 235, .6)' }, 
+                    grid: { display: false }
                 },
                 y: {
-                    ticks: {
-                        color: 'black',
-                        font: {
-                            size: 12,
-                        }
-                    }
+                    ticks: { color: 'rgba(244, 241, 235, .6)' },
+                    grid: { color: 'rgba(244, 241, 235, .6)' }
+                } 
                 }
-            }
         }
     })
 }
@@ -114,7 +92,7 @@ async function denizSeviyesiGrafik() {
             datasets: [{
                 data: dataPoints,
                 borderColor: 'rgba(244, 241, 235, 1)', 
-                backgroundColor: '#1A1A2E', 
+                backgroundColor: 'rgba(244, 241, 235, .5)', 
                 fill: true, 
             }]
         },
@@ -126,12 +104,12 @@ async function denizSeviyesiGrafik() {
             },
             scales: {
                 x: {
-                    ticks: { color: 'black' }, 
+                    ticks: { color: 'rgba(244, 241, 235, .6)' }, 
                     grid: { display: false }
                 },
                 y: {
-                    ticks: { color: 'black' },
-                    grid: { color: 'rgba(0,0,0,0.1)' }
+                    ticks: { color: 'rgba(244, 241, 235, .6)' },
+                    grid: { color: 'rgba(244, 241, 235, .6)' }
                 }
             }
         }
