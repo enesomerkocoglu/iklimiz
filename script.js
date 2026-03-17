@@ -1,3 +1,20 @@
+        const menuBtn = document.querySelector('.menubtn');
+        const menuNav = document.querySelector('.menunav');
+
+        menuBtn.addEventListener('click', function() {
+        this.classList.toggle('active');
+    
+        if(this.classList.contains('active')){
+        menuNav.style.display = 'grid';
+        } else {
+        menuNav.style.display = 'none';
+        }
+        });
+        window.addEventListener('resize', function() {
+        if(window.innerWidth > 642){
+        menuNav.style.display = 'none';
+        }
+        });
 /*dönüşüm grafik başlangıç*/
 async function carbongrafik() {
     const response = await fetch('https://global-warming.org/api/co2-api');
@@ -122,7 +139,7 @@ const ulkeInputDOM = document.getElementById("ulke-arama");
 const ulkeDivDOM = document.getElementById("ulke-listesi");
 const ulkelerDOM = document.querySelectorAll(".li");
 const seçilenlerDivDOM = document.getElementById("secilen-ulkeler");
-const buttons = document.querySelectorAll("button");
+const buttons = document.querySelectorAll(".metrik-butonlari button");
 
 let seçilenbutton = "co2_per_capita";
 let myChart = null;
@@ -176,7 +193,7 @@ function seçilenlerEkleme() {
     div.className = "ulkeler";
     div.style = "display:flex; flex-direction:row; background:#B0B0B0; padding:2px; border-radius:5px; margin:2px 0; align-items:center;";
     const img = document.createElement("img");
-    img.src = "gorsel/close.svg";
+    img.src = "gorsel/closebtn.svg";
     img.style = "height:1.4rem; cursor:pointer;";
     img.addEventListener("click", () => {
     if(seçilenulke.length > 1){

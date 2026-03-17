@@ -53,12 +53,81 @@ header{
     color: var(--üçüncül-renk);
     transition: 300ms color;
 }
-.headerul li p{
-    color:var(--arka-plan-rengi);
+.co2goster  {
+    color: var(--arka-plan-rengi);
+    font-size: 2rem;
 }
-.headerul li p span {
+.co2goster span {
     color: var(--üçüncül-renk);
 }
+/*menu başlangıç*/
+.menubtn{
+    position: absolute;
+    top: 1.7rem;
+    right: 2.5rem;
+    cursor: pointer;
+    height: 4.8rem;
+    width: 4.8rem;
+    appearance: none;
+    border: none;
+    background-color: transparent;
+    display: none;
+    outline: none;
+}
+.menubtn img {
+    height: 100%;
+    width: 100%;
+    user-select: none;
+}
+.menubtn .clsbtn {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: rotate(45deg) ;
+    transition: 200ms  ease opacity , 300ms ease transform;
+    overflow: hidden;
+}
+.menubtn .opnbtn{
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: rotate(0deg);
+    transition: 200ms  ease opacity , 300ms ease transform;
+}
+.menubtn.active .opnbtn {
+    opacity: 0;
+    visibility: hidden;
+    transform: rotate(45deg) ;
+    transition: 200ms  ease opacity , 300ms ease transform;
+}
+.menubtn.active .clsbtn{
+    opacity: 1;
+    visibility: visible;
+    transform: rotate(90deg);
+    transition: 200ms   ease opacity , 300ms ease transform;
+}
+.menunav {
+    display: none;
+    height: auto; 
+    width: 100%;
+    background-color: var(--arka-plan-rengi);
+    position: fixed;       
+    top: 8rem;
+    left: 0;
+    z-index: 9998;         
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+.menunav a {
+    padding: 1rem;
+    text-decoration: none;
+    font-size: 1.6rem;
+    color: var(--ikinci-renk);
+    font-weight: 600;
+}
+/*menu bitiş*/
 /*header bitiş*/
 /*anasayfa başlangıç*/
 .anasayfa{
@@ -201,26 +270,37 @@ header{
     display: flex;
     flex-direction: row;
     align-items: center;
-    background-color: var(--arka-plan-rengi);
+    background-color: transparent;
     padding-top: 10rem;
+    position: relative;
+}
+.donusum h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--birincil-renk); 
+    position: absolute;
+    top: 20rem;
+    left: 5rem;
+}
+.progorsel {
+    width: 80%;
+    height: .2rem;
+    background-color: var(--üçüncül-renk);
+    margin: 2rem 0;
+    border-radius: 20px;
 }
 .donuscontainer1{
     height: auto;
     width: 45%;
-    background-color: var(--arka-plan-rengi);
-    padding: 14rem 5.2rem 8rem 5.2rem;
+    background-color:var(--arka-plan-rengi);
+    padding: 0 5.2rem ;
     display: grid;
-    grid-template-rows: 0 auto auto auto;
+    grid-template-rows:  auto auto auto;
 }
 .donuscontainer1 .donuşdiv1 {
     height: auto;
     position: relative;
     padding-top: 7rem;
-}
-.donuscontainer1 h1 {
-    font-size: 3rem;
-    font-weight: 700;
-    color: var(--birincil-renk);   
 }
 .donuscontainer1 h2 {
     font-size: 3.5rem;
@@ -568,6 +648,10 @@ footer p {
 .procontainer1 .prodiv2 p {
     font-size: 1.7rem;
 }
+.donusum h1 {
+    top: 17rem;
+    left: 5rem;
+}
 }
 /*media etiketleri bitiş*/
 @media (max-width: 1097px) {
@@ -592,6 +676,10 @@ header{
 }
 .procontainer1 .prodiv2 h2 {
     font-size: 2rem;
+}
+.donusum h1 {
+    top: 10rem;
+    left: 5rem;
 }
 .donuscontainer2{
     width: 45%;
@@ -619,6 +707,114 @@ header{
     font-size: 2rem;
 }
 }
-@media (max-width: 830px){
-    
+@media (max-width: 780px){
+.headerul{
+    gap: 3rem;
+}
+.ulkediv {
+    max-width: 23rem;
+}
+.analizcontainer1 .metrik-butonlari button {
+    padding: 0 1rem;
+}
+}
+@media (max-width: 730px){
+.procontainer1 .prodiv2 h1 {
+    font-size: 2.6rem;
+}
+.procontainer1 .prodiv2 p {
+    font-size: 1.6rem;
+}
+.donuscontainer1 h1 {
+    font-size: 2.6rem; 
+}
+.donuscontainer1 h2 {
+    font-size: 2.3rem;
+}
+.donuscontainer1 h3 {
+    font-size: 2.1rem;
+}
+.donuscontainer1 p {
+    font-size: 1.7rem;
+}
+}
+@media (max-width: 681px){
+.donuscontainer2 .span1 {
+    right: 1rem;
+}
+.donuscontainer2 .enerjidiv2 {
+    padding-left: 1rem;
+}
+.donuscontainer2 .yatırımdiv2 {
+    padding-left: 1rem;
+}
+.footercontainer1 .verikaynaklari div a {
+    font-size: 1.6rem;
+}
+.footercontainer2 div a {
+    font-size: 1.6rem;
+}
+}
+@media (max-width: 642px){
+.menubtn {
+        display: block;
+    }
+header nav {
+        display: none;
+    }
+.co2goster {
+        padding-right: 7rem;
+}
+.donusum {
+    height: 89vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+}
+.donusum h1 {
+    top: 18rem;
+    left: 2rem;
+}
+.donuscontainer1{
+    height: auto;
+    width: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding:0 2rem;
+}
+.progorsel {
+    width: .2rem;
+    height: 80%;
+    margin: 0 2rem;
+}
+.donuscontainer1 .donuşdiv1 {
+    padding-top: 0;
+}
+.donuscontainer2{
+    height: 30rem;
+    width: 90%;
+    margin-left: 0;
+    margin-top: 5rem;
+    padding: 3rem 3rem;
+}
+.donuscontainer2 .div1{
+    height: 80%;
+}
+.donuscontainer2 .span1 {
+    top: 2rem;
+}
+.ulkediv {
+    max-width: 20rem;
+}
+.analizcontainer1 .metrik-butonlari button {
+    padding: 0 .5rem;
+}
+}
+@media (max-width: 555px) {
+
 }
