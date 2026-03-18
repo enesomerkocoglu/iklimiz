@@ -645,6 +645,8 @@ footer p{
     text-decoration: none;
     color: var(--arka-plan-rengi);
     transition: .3s ease;
+    display: flex;
+    align-items: center;
 }
 .footercontainer2 div a:hover{
     color: var(--üçüncül-renk);
@@ -781,7 +783,7 @@ footer p{
         padding: 0 2rem;
     }
     .co2goster{
-        display: none;
+        margin-right: 6rem;
     }
     /* Anasayfa */
     .anasayfa{
@@ -941,7 +943,7 @@ footer p{
 }
 @media (max-width: 480px){
     html, body{
-        font-size: 55%;
+        font-size: 60%;
     }
     .anasayfa .anacontainer1 h1{
         font-size: 3.4rem;
@@ -991,15 +993,15 @@ footer p{
         font-size: 2rem;
     }
     .footercontainer1 .verikaynaklari div #nasa{
-        width: 7rem;
+        width: 7.5rem;
     }
     .footercontainer1 .verikaynaklari div #world{
-        width: 4.5rem;
+        width: 4rem;
     }
 }
 @media (max-width: 360px){
     html, body{
-        font-size: 50%;
+        font-size: 55%;
     }
     .anasayfa .anacontainer1 h1{
         font-size: 3rem;
