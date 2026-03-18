@@ -788,11 +788,11 @@ footer p{
     .anasayfa{
         min-height: auto;
         height: 84%;
-        padding: 5rem 2rem 4rem;
+        padding: 15rem 2rem 4rem;
         justify-content: flex-start;
     }
     .anasayfa .anacontainer1{
-        margin-bottom: 15rem;
+        margin-bottom: 10rem;
     }
     .anasayfa .anacontainer1 h1{
         font-size: 4rem;
