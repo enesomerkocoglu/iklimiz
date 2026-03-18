@@ -39,9 +39,10 @@ header{
     flex-direction: row;
     list-style: none;
     gap: 10rem;
+    margin-right: 15rem;
 }
 .headerul li{
-    font-size: 2rem;  
+    font-size: 2rem;
 }
 .headerul li a{
     color: var(--arka-plan-rengi);
@@ -51,13 +52,14 @@ header{
 }
 .headerul li a:hover{
     color: var(--üçüncül-renk);
-    transition: 300ms color;
 }
-.co2goster  {
+.co2goster{
+    position: absolute;
     color: var(--arka-plan-rengi);
     font-size: 2rem;
+    right: 2rem;
 }
-.co2goster span {
+.co2goster span{
     color: var(--üçüncül-renk);
 }
 /*menu başlangıç*/
@@ -74,18 +76,18 @@ header{
     display: none;
     outline: none;
 }
-.menubtn img {
+.menubtn img{
     height: 100%;
     width: 100%;
     user-select: none;
 }
-.menubtn .clsbtn {
+.menubtn .clsbtn{
     opacity: 0;
     position: absolute;
     top: 0;
     right: 0;
-    transform: rotate(45deg) ;
-    transition: 200ms  ease opacity , 300ms ease transform;
+    transform: rotate(45deg);
+    transition: 200ms ease opacity, 300ms ease transform;
     overflow: hidden;
 }
 .menubtn .opnbtn{
@@ -94,46 +96,54 @@ header{
     top: 0;
     right: 0;
     transform: rotate(0deg);
-    transition: 200ms  ease opacity , 300ms ease transform;
+    transition: 200ms ease opacity, 300ms ease transform;
 }
-.menubtn.active .opnbtn {
+.menubtn.active .opnbtn{
     opacity: 0;
     visibility: hidden;
-    transform: rotate(45deg) ;
-    transition: 200ms  ease opacity , 300ms ease transform;
+    transform: rotate(45deg);
+    transition: 200ms ease opacity, 300ms ease transform;
 }
 .menubtn.active .clsbtn{
     opacity: 1;
     visibility: visible;
     transform: rotate(90deg);
-    transition: 200ms   ease opacity , 300ms ease transform;
+    transition: 200ms ease opacity, 300ms ease transform;
 }
-.menunav {
+.menunav{
     display: none;
-    height: auto; 
+    height: auto;
     width: 100%;
     background-color: var(--arka-plan-rengi);
-    position: fixed;       
+    position: fixed;
     top: 8rem;
     left: 0;
-    z-index: 9998;         
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    z-index: 9998;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    flex-direction: column;
 }
-.menunav a {
-    padding: 1rem;
+.menunav a{
+    display: block;
+    padding: 1.5rem 3rem;
     text-decoration: none;
-    font-size: 1.6rem;
-    color: var(--ikinci-renk);
+    font-size: 1.8rem;
+    color: var(--ikincil-renk);
     font-weight: 600;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+    transition: .3s ease;
+}
+.menunav a:hover{
+    color: var(--birincil-renk);
+    background-color: rgba(13,76,60,0.05);
 }
 /*menu bitiş*/
 /*header bitiş*/
 /*anasayfa başlangıç*/
 .anasayfa{
     width: 100%;
-    max-height: 83.3vh;
-    height: 100%;
+    min-height: 83.3vh;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -155,7 +165,7 @@ header{
     line-height: 8.5rem;
     text-align: center;
 }
-.gorsel {
+.gorsel{
     width: 80%;
     height: .2rem;
     background-color: var(--üçüncül-renk);
@@ -169,7 +179,7 @@ header{
     text-align: center;
     line-height: 3rem;
 }
-.anacontainer2 {
+.anacontainer2{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -178,38 +188,33 @@ header{
     animation: hareket 1s infinite alternate;
     transform: translateY(-5px);
 }
-@keyframes hareket {
-  0%   { transform: translateY(-5px); }
-  100% { transform: translateY(10px); }
+@keyframes hareket{
+    0%   { transform: translateY(-5px); }
+    100% { transform: translateY(10px); }
 }
-.anacontainer2 a {
-    font-size: 2.0rem;
+.anacontainer2 a{
+    font-size: 2rem;
     color: var(--birincil-renk);
     font-weight: 600;
     text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 /*anasayfa bitiş*/
 /*problem başlangıç*/
-.problem {
-    max-height: 100vh;
-    height: 100%;
+.problem{
+    min-height: 100vh;
+    height: auto;
     width: 100%;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
     background-color: var(--arka-plan-rengi);
     padding-top: 8rem;
 }
-.procontainer1 .proh1 {
-    font-size: 3rem;
-    font-weight: 700;
-    color: var(--birincil-renk);
-    margin-left: 2.2rem;
-}
 .procontainer1{
-    padding-top: 9rem;
-    max-height:92vh;
-    height: 100%;
+    min-height: 92vh;
+    height: auto;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -219,53 +224,59 @@ header{
     padding: 1rem 2rem;
     position: relative;
 }
-.procontainer1 .prodiv1 {
+.procontainer1 .proh1{
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--birincil-renk);
+    margin-left: 0.2rem;
+}
+.procontainer1 .prodiv1{
     display: flex;
     flex-direction: row;
-    height: 80%;
+    height:30rem;
     width: 100%;
 }
-.procontainer1 .prodiv2 {
+.procontainer1 .prodiv2{
     display: flex;
     flex-direction: column;
     background-color: var(--arka-plan-rengi);
     width: 50%;
-    border-radius: 15px 0 0 15px ;
+    border-radius: 15px 0 0 15px;
     padding: 1.5rem;
     height: 100%;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 }
-.procontainer1 .prodiv2 h1 {
+.procontainer1 .prodiv2 h1{
     font-size: 3.5rem;
     font-weight: 700;
     color: var(--ikincil-renk);
 }
-.procontainer1 .prodiv2 h2 {
+.procontainer1 .prodiv2 h2{
     font-size: 2.5rem;
     font-weight: 800;
     color: var(--üçüncül-renk);
     margin-top: 0.5rem;
 }
-.procontainer1 .prodiv2 p {
+.procontainer1 .prodiv2 p{
     font-size: 2rem;
     font-weight: 500;
     color: var(--metin-rengi);
     margin-top: 0.5rem;
     text-align: start;
 }
-.procontainer1 .prograf {
-    border-radius:  0 15px 15px 0  ;
+.procontainer1 .prograf{
+    border-radius: 0 15px 15px 0;
     height: 100%;
     width: 50%;
     background-color: var(--ikincil-renk);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
     padding: 0 1rem;
 }
 /*problem bitiş*/
 /*dönüşüm başlangıç*/
-.donusum {
-    max-height: 89vh;
-    height: 100%;
+.donusum{
+    min-height: 89vh;
+    height: auto;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -274,10 +285,10 @@ header{
     padding-top: 10rem;
     position: relative;
 }
-.donusum h1 {
+.donusum h1{
     font-size: 3rem;
     font-weight: 700;
-    color: var(--birincil-renk); 
+    color: var(--birincil-renk);
     position: absolute;
     top: 20rem;
     left: 5rem;
@@ -292,37 +303,38 @@ header{
 .donuscontainer1{
     height: auto;
     width: 45%;
-    background-color:var(--arka-plan-rengi);
-    padding: 0 5.2rem ;
+    background-color: var(--arka-plan-rengi);
+    padding: 0 5.2rem;
     display: grid;
-    grid-template-rows:  auto auto auto;
+    grid-template-rows: auto auto auto;
+    margin-top: 9rem;
 }
-.donuscontainer1 .donuşdiv1 {
+.donuscontainer1 .donuşdiv1,
+.donuscontainer1 .donuşdiv2{
     height: auto;
     position: relative;
-    padding-top: 7rem;
 }
-.donuscontainer1 h2 {
+.donuscontainer1 h2{
     font-size: 3.5rem;
     font-weight: 700;
-    color: var(--ikincil-renk);   
+    color: var(--ikincil-renk);
 }
-.donuscontainer1 h3 {
+.donuscontainer1 h3{
     font-size: 2.5rem;
     font-weight: 800;
     color: var(--üçüncül-renk);
     margin-top: 0.5rem;
 }
-.donuscontainer1 p {
+.donuscontainer1 p{
     font-size: 2rem;
     font-weight: 500;
     color: var(--metin-rengi);
     margin-top: 2rem;
-    text-align: start; 
+    text-align: start;
 }
 .donuscontainer2{
-    max-height: 55vh;
-    height: 100%;
+    min-height: 55vh;
+    height: auto;
     width: 40%;
     background-color: var(--birincil-renk);
     display: grid;
@@ -333,9 +345,9 @@ header{
     border-radius: 15px;
     padding: 9rem 10rem 11rem 10rem;
     gap: 5rem;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 }
-.donuscontainer2 h3 {
+.donuscontainer2 h3{
     font-size: 2rem;
     font-weight: 600;
     color: var(--arka-plan-rengi);
@@ -343,14 +355,14 @@ header{
 }
 .donuscontainer2 .div1{
     width: auto;
-    height: 70%;
+    height: 10rem;
     background-color: var(--arka-plan-rengi);
     position: relative;
     display: flex;
     justify-content: start;
     align-items: center;
 }
-.donuscontainer2 .span1 {
+.donuscontainer2 .span1{
     font-size: 2.5rem;
     font-weight: 700;
     color: var(--birincil-renk);
@@ -358,7 +370,7 @@ header{
     right: 2rem;
     top: 3rem;
 }
-.donuscontainer2 .enerjidiv2 {
+.donuscontainer2 .enerjidiv2{
     width: 32%;
     height: 100%;
     background-color: var(--üçüncül-renk);
@@ -366,7 +378,7 @@ header{
     align-items: center;
     padding-left: 2rem;
 }
-.donuscontainer2 .yatırımdiv2 {
+.donuscontainer2 .yatırımdiv2{
     width: 65%;
     height: 100%;
     background-color: var(--üçüncül-renk);
@@ -374,61 +386,57 @@ header{
     align-items: center;
     padding-left: 2rem;
 }
-.donuscontainer2 .enerjispan2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: var(--arka-plan-rengi);
-}
-.donuscontainer2 .yatırımspan2 {
+.donuscontainer2 .enerjispan2,
+.donuscontainer2 .yatırımspan2{
     font-size: 2.5rem;
     font-weight: 700;
     color: var(--arka-plan-rengi);
 }
 /*dönüşüm bitiş*/
 /*analiz başlangıç*/
-.analiz {
-    max-height: 100vh;
-    height: 100%;
+.analiz{
+    min-height: 100vh;
+    height: auto;
     width: 100%;
     display: flex;
     flex-direction: column;
     background-color: var(--arka-plan-rengi);
-    padding: 10rem 5.2rem 0 5.2rem;
+    padding: 10rem 5.2rem 4rem 5.2rem;
     gap: 5rem;
 }
-.analiz .başlık h1 {
+.analiz .başlık h1{
     font-size: 3rem;
     font-weight: 700;
     color: var(--birincil-renk);
 }
-.analizcontainer1 {
+.analizcontainer1{
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
-    max-height: 15vh;
-    height: 100%;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
-    width: auto;
+    min-height: 15rem;
+    height: auto;
+    box-shadow: 0 0 30px rgba(0,0,0,0.15);
+    width: 100%;
     border-radius: 15px;
-    padding: 0 10rem;
+    padding: 2rem 10rem;
 }
-.analizcontainer1 h2 {
+.analizcontainer1 h2{
     font-size: 1.6rem;
     font-weight: 600;
     color: var(--ikincil-renk);
     padding-bottom: .5rem;
 }
-.ulkediv {
+.ulkediv{
     max-width: 30.5rem;
     width: 100%;
     height: auto;
     z-index: 100;
     position: relative;
 }
-.analizcontainer1 #ulke-arama {
+.analizcontainer1 #ulke-arama{
     border: 1px solid var(--birincil-renk);
-    border-radius:10px 10px 0 0 ;
+    border-radius: 10px 10px 0 0;
     max-height: 5rem;
     height: 100%;
     width: 100%;
@@ -436,9 +444,9 @@ header{
     outline: none;
     font-size: 1.5rem;
     color: black;
-    padding-left:.5rem;
+    padding: 2rem;  
 }
-.analizcontainer1 #ulke-arama::placeholder {
+.analizcontainer1 #ulke-arama::placeholder{
     color: black;
     font-size: 1.5rem;
 }
@@ -455,49 +463,51 @@ header{
     gap: 3px;
 }
 .analizcontainer1 #ulke-listesi{
-    height: 0%;
+    height: 0;
     overflow: hidden;
-    transition: .3s ease ;
+    transition: .3s ease;
     display: flex;
     position: absolute;
     flex-direction: column;
     width: 100%;
-    border-radius:0 0 10px 10px;
+    border-radius: 0 0 10px 10px;
     background-color: var(--arka-plan-rengi);
     align-items: center;
-    border-width:0 1px 1px 1px;
+    border-width: 0 1px 1px 1px;
     border-style: solid;
     border-color: var(--birincil-renk);
 }
-.analizcontainer1 #ulke-listesi.activelist {
-    height: 10rem;
+.analizcontainer1 #ulke-listesi.activelist{
+    height: 15rem;
 }
-.analizcontainer1 #ulke-listesi li {
+.analizcontainer1 #ulke-listesi li{
     list-style: none;
     font-size: 1.5rem;
     align-items: center;
     cursor: pointer;
     transition: .3s ease;
+    padding: .4rem 1rem;
+    width: 100%;
+    text-align: center;
 }
 .analizcontainer1 #ulke-listesi li:hover{
-    transition: .3s ease;
-    color: #0D4C3C;
+    color: var(--birincil-renk);
 }
-.analizcontainer1 .metrik-butonlari {
+.analizcontainer1 .metrik-butonlari{
     border: 1px solid var(--birincil-renk);
     border-radius: 20px;
-    max-height: 5rem;
+    max-height: 15rem;
     height: 100%;
     width: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2px ;
+    padding: 2px;
 }
-.analizcontainer1 .metrik-butonlari button {
+.analizcontainer1 .metrik-butonlari button{
     appearance: none;
     height: 100%;
-    padding: 0 2rem;
+    padding:  1.4rem;
     width: auto;
     border: none;
     background-color: var(--arka-plan-rengi);
@@ -509,65 +519,66 @@ header{
     outline: none;
     transition: .3s ease;
 }
-.analizcontainer1 .metrik-butonlari button.active {
-    transition: .3s ease;
+.analizcontainer1 .metrik-butonlari button.active{
     background-color: var(--birincil-renk);
     color: var(--arka-plan-rengi);
 }
-.analizcontainer2 {
+.analizcontainer2{
     display: flex;
     justify-content: center;
     align-items: center;
-    max-height: 51vh;
-    height: 100%;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+    max-height: 51rem;
+    height: auto;
+    box-shadow: 0 0 30px rgba(0,0,0,0.15);
     width: 100%;
     border-radius: 15px;
+    padding: 2rem;
     position: relative;
 }
-#iklimAnalizGrafik {
+#iklimAnalizGrafik{
     width: 100%;
     height: auto;
 }
 /*analiz bitiş*/
 /*footer başlangıç*/
-footer {
+footer{
     width: 100%;
-    max-height: 40rem;
-    height: 100%;
+    min-height: 40rem;
+    height: auto;
     background-color: var(--birincil-renk);
-    padding: 5rem;
+    padding: 5rem 5rem 0 5rem;
     display: flex;
     justify-content: start;
     align-items: center;
     flex-direction: column;
 }
-footer p {
+footer p{
     font-size: 1.5rem;
     color: var(--arka-plan-rengi);
     margin-top: 2rem;
+    text-align: center;
 }
-.footer {
+.footer{
     display: flex;
     flex-direction: row;
-    max-height: 20rem;
-    height: 100%;
+    min-height: 20rem;
+    height: auto;
     width: 100%;
     gap: 10%;
     margin-bottom: 10rem;
 }
-.footercontainer1 {
+.footercontainer1{
     height: 100%;
     width: 60%;
     position: relative;
 }
-.footercontainer1 h1 {
+.footercontainer1 h1{
     font-size: 3rem;
     font-weight: 700;
     color: var(--üçüncül-renk);
     margin-bottom: 3rem;
 }
-.footercontainer1 .verikaynaklari {
+.footercontainer1 .verikaynaklari{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -575,7 +586,7 @@ footer p {
     height: 100%;
     width: 100%;
 }
-.footercontainer1 .verikaynaklari div {
+.footercontainer1 .verikaynaklari div{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -583,9 +594,11 @@ footer p {
     height: 100%;
     width: 30%;
     border-top: 2px solid var(--üçüncül-renk);
+    padding-top: 1.5rem;
+    gap: 1rem;
 }
-.footercontainer1 .verikaynaklari div a {
-    font-size: 2.5rem;
+.footercontainer1 .verikaynaklari div a{
+    font-size: 2rem;
     font-weight: 600;
     color: var(--arka-plan-rengi);
     text-align: center;
@@ -593,228 +606,434 @@ footer p {
     transition: .3s ease;
 }
 .footercontainer1 .verikaynaklari div a:hover{
-    transition: .3s ease;
-    color: #DAA520;
+    color: var(--üçüncül-renk);
 }
-.footercontainer1 .verikaynaklari div #nasa {
+.footercontainer1 .verikaynaklari div #nasa{
     width: 10rem;
     height: auto;
 }
-.footercontainer1 .verikaynaklari div #world {
+.footercontainer1 .verikaynaklari div #world{
     width: 6rem;
     height: auto;
-    margin: 2.3rem 0;
+    margin: 1.9rem 0;
 }
-.footercontainer2 {
+.footercontainer2{
     height: 100%;
     width: 30%;
     position: relative;
 }
-.footercontainer2 .iletişim {
+.footercontainer2 .iletişim{
     display: grid;
     grid-template-rows: auto auto;
-    gap: 1rem;
+    gap: 2rem;
+    margin-top: 2rem;
 }
-.footercontainer2 h1 {
+.footercontainer2 h1{
     font-size: 3rem;
     font-weight: 700;
     color: var(--üçüncül-renk);
     margin-bottom: 1rem;
 }
-.footercontainer2 div {
-    max-height: 12rem;
-    height: 100%;
+.footercontainer2 div{
+    height: auto;
     width: 100%;
     display: flex;
     align-items: center;
 }
-.footercontainer2 div a {
+.footercontainer2 div a{
     font-size: 2rem;
     font-weight: 700;
     text-decoration: none;
     color: var(--arka-plan-rengi);
     transition: .3s ease;
 }
-.footercontainer2 div a:hover {
-    transition: .3s ease;
+.footercontainer2 div a:hover{
     color: var(--üçüncül-renk);
 }
-.footercontainer2 div a img {
+.footercontainer2 div a img{
+    width: 2.4rem;
+    height: auto;
     margin-right: 2rem;
 }
 /*footer bitiş*/
 /*media etiketleri başlangıç*/
-@media (max-width: 1380px) {
-.procontainer1 .prodiv2 p {
-    font-size: 1.7rem;
+@media (max-width: 1380px){
+    .procontainer1 .prodiv2 p{
+        font-size: 1.7rem;
+    }
+    .donusum h1{
+        top: 17rem;
+        left: 5rem;
+    }
 }
-.donusum h1 {
-    top: 17rem;
-    left: 5rem;
-}
-}
-/*media etiketleri bitiş*/
-@media (max-width: 1097px) {
-header{
-    padding: 0 2rem;
-}
-.headerul{
-    gap: 5rem;
-}
-.headerul li{
-    font-size: 2rem;  
-}
-.anasayfa .anacontainer1 h1{
-    font-size: 5rem;
-    line-height: 7.5rem;
-}
-.anasayfa .anacontainer1 p{
-    font-size: 1.7rem;
-}
-.procontainer1 .prodiv2 h1 {
-    font-size: 3rem;
-}
-.procontainer1 .prodiv2 h2 {
-    font-size: 2rem;
-}
-.donusum h1 {
-    top: 10rem;
-    left: 5rem;
-}
-.donuscontainer2{
-    width: 45%;
-    max-height: 50vh;
-    margin-left: 5rem;
-    margin-top: 13rem;
-    padding: 9rem 5rem 9rem 5rem;
-}
-.donuscontainer1 h1 {
-    font-size: 3rem; 
-}
-.donuscontainer1 h2 {
-    font-size: 2.7rem;
-}
-.donuscontainer1 h3 {
-    font-size: 2.5rem;
-}
-.donuscontainer1 p {
-    font-size: 2rem;
-}
-.analizcontainer1 {
-    padding: 0 2rem;
-}
-.footercontainer1 .verikaynaklari div a {
-    font-size: 2rem;
-}
+@media (max-width: 1097px){
+    header{
+        padding: 0 2rem;
+    }
+    .headerul{
+        gap: 5rem;
+    }
+    .anasayfa .anacontainer1 h1{
+        font-size: 5rem;
+        line-height: 7.5rem;
+    }
+    .anasayfa .anacontainer1 p{
+        font-size: 1.7rem;
+    }
+    .procontainer1 .prodiv2 h1{
+        font-size: 3rem;
+    }
+    .procontainer1 .prodiv2 h2{
+        font-size: 2rem;
+    }
+    .donusum h1{
+        top: 10rem;
+        left: 3rem;
+    }
+    .donuscontainer2{
+        width: 45%;
+        min-height: 50vh;
+        height: auto;
+        margin-left: 5rem;
+        margin-top: 13rem;
+        padding: 7rem 4rem;
+    }
+    .donuscontainer1 h2{
+        font-size: 2.7rem;
+    }
+    .donuscontainer1 h3{
+        font-size: 2.5rem;
+    }
+    .donuscontainer1 p{
+        font-size: 2rem;
+    }
+    .analizcontainer1{
+        padding: 2rem;
+    }
+    .footercontainer1 .verikaynaklari div a{
+        font-size: 1.8rem;
+    }
 }
 @media (max-width: 780px){
-.headerul{
-    gap: 3rem;
-}
-.ulkediv {
-    max-width: 23rem;
-}
-.analizcontainer1 .metrik-butonlari button {
-    padding: 0 1rem;
-}
+    .headerul{
+        gap: 3rem;
+    }
+    .ulkediv{
+        max-width: 23rem;
+    }
+    .analizcontainer1 .metrik-butonlari button{
+        padding: 1.4rem;
+        font-size: 1.4rem;
+    }
+    .donuscontainer2{
+        padding: 5rem 3rem;
+    }
+    .anasayfa .anacontainer1 h1{
+        font-size: 4.5rem;
+        line-height: 6.5rem;
+    }
+    .procontainer1 .prodiv1{
+        height: 28rem;
+    }
 }
 @media (max-width: 730px){
-.procontainer1 .prodiv2 h1 {
-    font-size: 2.6rem;
-}
-.procontainer1 .prodiv2 p {
-    font-size: 1.6rem;
-}
-.donuscontainer1 h1 {
-    font-size: 2.6rem; 
-}
-.donuscontainer1 h2 {
-    font-size: 2.3rem;
-}
-.donuscontainer1 h3 {
-    font-size: 2.1rem;
-}
-.donuscontainer1 p {
-    font-size: 1.7rem;
-}
+    .procontainer1 .prodiv2 h1{
+        font-size: 2.4rem;
+    }
+    .procontainer1 .prodiv2 p{
+        font-size: 1.5rem;
+    }
+    .donuscontainer1 h2{
+        font-size: 2.3rem;
+    }
+    .donuscontainer1 h3{
+        font-size: 2.1rem;
+    }
+    .donuscontainer1 p{
+        font-size: 1.7rem;
+    }
 }
 @media (max-width: 681px){
-.donuscontainer2 .span1 {
-    right: 1rem;
-}
-.donuscontainer2 .enerjidiv2 {
-    padding-left: 1rem;
-}
-.donuscontainer2 .yatırımdiv2 {
-    padding-left: 1rem;
-}
-.footercontainer1 .verikaynaklari div a {
-    font-size: 1.6rem;
-}
-.footercontainer2 div a {
-    font-size: 1.6rem;
-}
+    .donuscontainer2 .span1{
+        right: 1rem;
+    }
+    .donuscontainer2 .enerjidiv2{
+        padding-left: 1rem;
+    }
+    .donuscontainer2 .yatırımdiv2{
+        padding-left: 1rem;
+    }
+    .footercontainer1 .verikaynaklari div a{
+        font-size: 1.6rem;
+    }
+    .footercontainer2 div a{
+        font-size: 1.6rem;
+    }
 }
 @media (max-width: 642px){
-.menubtn {
+    /* Header */
+    .menubtn{
         display: block;
     }
-header nav {
+    header nav{
         display: none;
     }
-.co2goster {
-        padding-right: 7rem;
+    header{
+        padding: 0 2rem;
+    }
+    .co2goster{
+        display: none;
+    }
+    /* Anasayfa */
+    .anasayfa{
+        min-height: auto;
+        height: 84%;
+        padding: 25rem 2rem 4rem;
+        justify-content: flex-start;
+    }
+    .anasayfa .anacontainer1{
+        margin-bottom: 10rem;
+    }
+    .anasayfa .anacontainer1 h1{
+        font-size: 4rem;
+        line-height: 5.5rem;
+    }
+    .anasayfa .anacontainer1 p{
+        font-size: 1.6rem;
+        line-height: 2.6rem;
+    }
+    /* Problem */
+    .problem{
+        padding-top: 5rem;
+    }
+    .procontainer1{
+        min-height: auto;
+        padding: 2rem 1.5rem;
+        gap: 2rem;
+    }
+    .procontainer1 .prodiv1{
+        flex-direction: column;
+        height: auto;
+    }
+    .procontainer1 .prodiv2{
+        width: 100%;
+        height: auto;
+        border-radius: 15px 15px 0 0;
+        padding: 2rem;
+    }
+    .procontainer1 .prograf{
+        width: 100%;
+        min-height: 28rem;
+        height: auto;
+        border-radius: 0 0 15px 15px;
+    }
+    /* Dönüşüm */
+    .donusum{
+        min-height: auto;
+        flex-direction: column;
+        align-items: start;
+        justify-content: flex-start;
+        padding: 5rem 2rem 4rem;
+        gap: 0;
+    }
+    .donusum h1{
+        top: 6rem;
+        left: 2rem;
+    }
+    .donuscontainer1{
+        width: 100%;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+    .donuscontainer1 .donuşdiv1,
+    .donuscontainer1 .donuşdiv2{
+        padding-top: 0;
+        padding-bottom: 2rem;
+    }
+    .progorsel{
+        width: 60%;
+        height: .2rem;
+        margin: 1rem auto;
+    }
+    .donuscontainer2{
+        min-height: auto;
+        width: 100%;
+        margin-left: 0;
+        margin-top: 3rem;
+        padding: 3rem 2.5rem;
+        gap: 2.5rem;
+    }
+    .donuscontainer2 .div1{
+        height: 6rem;
+    }
+    .donuscontainer2 .span1{
+        font-size: 2rem;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 1rem;
+    }
+    .donuscontainer2 .enerjispan2,
+    .donuscontainer2 .yatırımspan2{
+        font-size: 2rem;
+    }
+    /* Analiz */
+    .analiz{
+        min-height: auto;
+        padding: 5rem 1.5rem 4rem;
+        gap: 2.5rem;
+    }
+    .analiz .başlık h1{
+        font-size: 2.6rem;
+    }
+    .analizcontainer1{
+        flex-direction: column;
+        min-height: auto;
+        height: auto;
+        padding: 2rem 1.5rem;
+        gap: 1.5rem;
+        align-items: center;
+    }
+    .ulkediv{
+        max-width: 100%;
+        width: 100%;
+    }
+    .analizcontainer1 h2{
+        font-size: 1.5rem;
+    }
+    .analizcontainer1 .metrik-butonlari{
+        width: 100%;
+        max-height: none;
+        height: 5rem;
+    }
+    .analizcontainer2{
+        min-height: 40rem;
+        padding: 1.5rem;
+    }
+    /* Footer */
+    .footer{
+        flex-direction: column;
+        gap: 3rem;
+        margin-bottom: 3rem;
+    }
+    .footercontainer1{
+        width: 100%;
+    }
+    .footercontainer1 h1{
+        font-size: 2.4rem;
+        margin-bottom: 2rem;
+    }
+    .footercontainer1 .verikaynaklari{
+        gap: 3rem;
+    }
+    .footercontainer1 .verikaynaklari div a{
+        font-size: 1.5rem;
+    }
+    .footercontainer2{
+        width: 100%;
+        margin-top: 2rem;
+    }
+    .footercontainer2 h1{
+        font-size: 2.4rem;
+    }
+    .footercontainer2 div a{
+        font-size: 1.6rem;
+    }
 }
-.donusum {
-    height: 89vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: end;
+@media (max-width: 480px){
+    html, body{
+        font-size: 65%;
+    }
+    .anasayfa .anacontainer1 h1{
+        font-size: 3.8rem;
+        line-height: 5rem;
+    }
+    .anasayfa .anacontainer1 p{
+        font-size: 1.6rem;
+    }
+    .procontainer1 .prodiv2 h1{
+        font-size: 2.3rem;
+    }
+    .procontainer1 .prodiv2 h2{
+        font-size: 1.9rem;
+    }
+    .procontainer1 .prodiv2 p{
+        font-size: 1.5rem;
+    }
+    .procontainer1 .prograf{
+        min-height: 23rem;
+    }
+    .donuscontainer1 h2{
+        font-size: 2.5rem;
+    }
+    .donuscontainer1 h3{
+        font-size: 2.1rem;
+    }
+    .donuscontainer1 p{
+        font-size: 1.6rem;
+    }
+    .donuscontainer2{
+        padding: 2.5rem 2rem;
+    }
+    .donuscontainer2 h3{
+        font-size: 1.7rem;
+    }
+    .analiz .başlık h1{
+        font-size: 2.5rem;
+    }
+    footer{
+        padding: 3rem 2rem;
+    }
+    footer p{
+        font-size: 1.4rem;
+    }
+    .footercontainer1 h1,
+    .footercontainer2 h1{
+        font-size: 2.1rem;
+    }
+    .footercontainer1 .verikaynaklari div #nasa{
+        width: 7rem;
+    }
+    .footercontainer1 .verikaynaklari div #world{
+        width: 4.5rem;
+    }
 }
-.donusum h1 {
-    top: 18rem;
-    left: 2rem;
-}
-.donuscontainer1{
-    height: auto;
-    width: 100%;
-    padding: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding:0 2rem;
-}
-.progorsel {
-    width: .2rem;
-    height: 80%;
-    margin: 0 2rem;
-}
-.donuscontainer1 .donuşdiv1 {
-    padding-top: 0;
-}
-.donuscontainer2{
-    height: 30rem;
-    width: 90%;
-    margin-left: 0;
-    margin-top: 5rem;
-    padding: 3rem 3rem;
-}
-.donuscontainer2 .div1{
-    height: 80%;
-}
-.donuscontainer2 .span1 {
-    top: 2rem;
-}
-.ulkediv {
-    max-width: 20rem;
-}
-.analizcontainer1 .metrik-butonlari button {
-    padding: 0 .5rem;
-}
-}
-@media (max-width: 555px) {
-
+@media (max-width: 360px){
+    html, body{
+        font-size: 55%;
+    }
+    .anasayfa .anacontainer1 h1{
+        font-size: 3rem;
+        line-height: 4.5rem;
+    }
+    .donuscontainer2{
+        width: 100%;
+        padding: 2rem 1.5rem;
+        border-radius: 10px;
+    }
+    .analizcontainer1 .metrik-butonlari{
+        flex-wrap: wrap;
+        height: auto;
+        gap: 4px;
+        padding: 4px;
+    }
+    .analizcontainer1 .metrik-butonlari button{
+        font-size: 1.1rem;
+        flex: 1 1 30%;
+    }
+    .footercontainer1 .verikaynaklari{
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .footercontainer1 .verikaynaklari div{
+        width: 100%;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 1.5rem;
+        border-top: none;
+        border-left: 2px solid var(--üçüncül-renk);
+        padding-left: 1.5rem;
+        padding-top: 0;
+    }
 }
