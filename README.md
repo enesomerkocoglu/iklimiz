@@ -28,7 +28,7 @@
 
 | Anasayfa | Problem |
 |:---:|:---:|
-| ![Anasayfa](https://github.com/enesomerkocoglu/iklimiz/assets/screenshots/anasayfa_git.png) | ![Problem](https://github.com/enesomerkocoglu/iklimiz/assets/screenshots/problem_git.png) |
+| ![Anasayfa](https://github.com/user-attachments/assets/128f7255-91a9-4986-90ce-fd23547ad979) | ![Problem](https://github.com/enesomerkocoglu/iklimiz/assets/screenshots/problem_git.png) |
 
 | Dönüşüm | Küresel Veri Kaşifi |
 |:---:|:---:|
