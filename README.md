@@ -1,17 +1,10 @@
-<!--
-  ╔══════════════════════════════════════════════════════╗
-  ║   Bu dosya: iklimiz PROJE README'sidir               ║
-  ║   Profil README → enesomerkocoglu/enesomerkocoglu    ║
-  ╚══════════════════════════════════════════════════════╝
--->
-
 <div align="center">
 
-# 🌍 İKLİMİZ
+# İKLİMİZ
 
 ### Geleceğin İzini Bugünden Takip Edin
 
-[![Live Demo](https://img.shields.io/badge/🌐%20Canlı%20Demo-İklimiz-1a5c38?style=for-the-badge)](https://enesomerkocoglu.github.io/iklimiz)
+[![Live Demo](https://img.shields.io/badge/%20Canlı%20Demo-İklimiz-1a5c38?style=for-the-badge)](https://enesomerkocoglu.github.io/iklimiz)
 [![GitHub](https://img.shields.io/badge/Kaynak%20Kodu-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/enesomerkocoglu/iklimiz)
 [![Status](https://img.shields.io/badge/Durum-Aktif%20Geliştirme-success?style=for-the-badge)]()
 
@@ -24,7 +17,7 @@
 
 ---
 
-## 📸 Ekran Görüntüleri
+## Ekran Görüntüleri
 
 | Anasayfa | Problem |
 |:---:|:---:|
@@ -36,7 +29,7 @@
 
 ---
 
-## 🎯 Projenin Çözdüğü Problem
+## Projenin Çözdüğü Problem
 
 İklim değişikliğine dair veriler, bilimsel raporlarda sıradan insanlara ulaşmayan bir dilde sunulmaktadır. **İklimiz**, NASA ve Dünya Bankası'nın ham verilerini herkesin anlayabileceği, etkileşimli bir görsel dile dönüştürür.
 
@@ -50,7 +43,7 @@
 
 ---
 
-## 🛠️ Kullanılan Teknolojiler
+## Kullanılan Teknolojiler
 
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
@@ -61,7 +54,7 @@
 
 ---
 
-## 🏗️ Teknik Mimari
+##  Teknik Mimari
 
 **Neden Vanilla JavaScript?**
 
@@ -94,18 +87,18 @@ filtered_data.json  ──→  Analiz Grafiği   (grafikGuncelle)
 
 ---
 
-## ✨ Özellikler
+##  Özellikler
 
-- 🔄 **Dinamik Filtreleme** — CO₂ İzi, CH₄ Etkisi, Sera Gazı arasında anlık geçiş; grafik anında güncellenir
-- 🗺️ **Çoklu Ülke Karşılaştırması** — Arama ile ülke seçimi, maksimum 3 ülke eş zamanlı karşılaştırma
-- 📡 **Canlı API Verisi** — Global Warming API üzerinden CO₂ ve sıcaklık verileri anlık çekilir
-- 💡 **Interaktif Grafik** — 3 farklı grafik türü: çizgi, çubuk ve dolgulu alan grafiği
-- 📱 **Responsive Tasarım** — Hamburger menü dahil, mobil uyumlu CSS Grid & Flexbox düzeni
-- 📌 **Sabitlenmiş CO₂ Göstergesi** — Tüm sayfa boyunca navbar'da `427 ppm` değeri görünür
+-  **Dinamik Filtreleme** — CO₂ İzi, CH₄ Etkisi, Sera Gazı arasında anlık geçiş; grafik anında güncellenir
+-  **Çoklu Ülke Karşılaştırması** — Arama ile ülke seçimi, maksimum 3 ülke eş zamanlı karşılaştırma
+-  **Canlı API Verisi** — Global Warming API üzerinden CO₂ ve sıcaklık verileri anlık çekilir
+-  **Interaktif Grafik** — 3 farklı grafik türü: çizgi, çubuk ve dolgulu alan grafiği
+-  **Responsive Tasarım** — Hamburger menü dahil, mobil uyumlu CSS Grid & Flexbox düzeni
+-  **Sabitlenmiş CO₂ Göstergesi** — Tüm sayfa boyunca navbar'da `427 ppm` değeri görünür
 
 ---
 
-## 📚 Bu Projeden Öğrendiklerim
+## Bu Projeden Öğrendiklerim
 
 **Teknik Kazanımlar**
 - **Canlı API entegrasyonu:** `fetch()` ve `async/await` ile dış API'lerden veri çekme, işleme ve hata senaryolarını yönetme pratiği kazandım. Deniz seviyesi API'sinin CORS hatası vermesi, gerçek dünya geliştirme süreçlerinde "her API çalışmaz" gerçeğini erken öğretti.
@@ -119,7 +112,7 @@ filtered_data.json  ──→  Analiz Grafiği   (grafikGuncelle)
 
 ---
 
-## ⚡ Performans & Kalite
+## Performans & Kalite
 
 | Metrik | Durum | Notlar |
 |---|---|---|
@@ -132,7 +125,7 @@ filtered_data.json  ──→  Analiz Grafiği   (grafikGuncelle)
 
 ---
 
-## 📡 Veri Kaynakları
+## Veri Kaynakları
 
 | Kaynak | Veri Türü | Kullanılan Bölüm |
 |---|---|---|
@@ -144,7 +137,7 @@ filtered_data.json  ──→  Analiz Grafiği   (grafikGuncelle)
 
 ---
 
-## 🗺️ Gelecek Planları
+## Gelecek Planları
 
 - [ ] Türkiye'ye özel iklim projeksiyonu modülü
 - [ ] PDF rapor indirme özelliği
@@ -154,7 +147,7 @@ filtered_data.json  ──→  Analiz Grafiği   (grafikGuncelle)
 
 ---
 
-## 📬 İletişim
+## İletişim
 
 <div align="center">
 
