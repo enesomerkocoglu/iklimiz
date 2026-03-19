@@ -28,11 +28,11 @@
 
 | Anasayfa | Problem |
 |:---:|:---:|
-| ![Anasayfa](https://github.com/user-attachments/assets/128f7255-91a9-4986-90ce-fd23547ad979) | ![Problem](https://github.com/enesomerkocoglu/iklimiz/assets/screenshots/problem_git.png) |
+| ![Anasayfa](https://github.com/user-attachments/assets/128f7255-91a9-4986-90ce-fd23547ad979) | ![Problem](https://github.com/user-attachments/assets/d3f62b23-79f8-4c92-91a8-f205c9286764) |
 
 | Dönüşüm | Küresel Veri Kaşifi |
 |:---:|:---:|
-| ![Dönüşüm](https://github.com/enesomerkocoglu/iklimiz/assets/screenshots/donusum_git.png) | ![Analiz](https://github.com/enesomerkocoglu/iklimiz/assets/screenshots/analiz_git.png) |
+| ![Dönüşüm](https://github.com/user-attachments/assets/c10e97a3-df4f-486e-a180-cc2de412f94c) | ![Analiz](https://github.com/user-attachments/assets/3a748124-9ca6-4af6-a820-b83d83a2eedc) |
 
 > 💡 **Görsel yükleme notu:** Görselleri GitHub Issues'a sürükle-bırak yaparak aldığın CDN linklerini yukarıdaki URL'lerin yerine yapıştır.
 
