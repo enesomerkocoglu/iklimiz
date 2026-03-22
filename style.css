@@ -40,11 +40,11 @@ header{
     gap: 10rem;
     margin-right: 15rem;
 }
-.headerul li{
-    font-size: 2rem;
-}
 .headerul li a:hover{
     color: var(--üçüncül-renk);
+}
+.headerul li{
+    font-size: 2rem;
 }
 .headerul li a{
     color: var(--arka-plan-rengi);
