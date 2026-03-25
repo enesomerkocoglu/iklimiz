@@ -43,14 +43,14 @@ header{
 .headerul li a:hover{
     color: var(--üçüncül-renk);
 }
-.headerul li{
-    font-size: 2rem;
-}
 .headerul li a{
     color: var(--arka-plan-rengi);
     text-decoration: none;
     font-weight: 500;
     transition: 300ms color;
+}
+.headerul li{
+    font-size: 2rem;
 }
 .co2goster{
     position: absolute;
