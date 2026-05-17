@@ -19,17 +19,20 @@ html,body{
 header{
     height: 8rem;
     width: 100%;
-    background-color: var(--birincil-renk);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 7rem;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    background: rgba(240, 237, 228, 0.25);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 0 0 20px 20px;
 }
 .logo{
-    color: var(--arka-plan-rengi);
+    color: var(--birincil-renk);
     font-size: 3rem;
     font-weight: 700;
 }
@@ -38,13 +41,13 @@ header{
     flex-direction: row;
     list-style: none;
     gap: 10rem;
-    margin-right: 15rem;
+    margin-right: 20rem;
 }
 .headerul li a:hover{
     color: var(--üçüncül-renk);
 }
 .headerul li a{
-    color: var(--arka-plan-rengi);
+    color: var(--birincil-renk);
     text-decoration: none;
     font-weight: 500;
     transition: 300ms color;
@@ -54,9 +57,10 @@ header{
 }
 .co2goster{
     position: absolute;
-    color: var(--arka-plan-rengi);
+    color: var(--birincil-renk);
     font-size: 2rem;
-    right: 2rem;
+    font-weight: 600;
+    right: 7rem;
 }
 .co2goster span{
     color: var(--üçüncül-renk);
