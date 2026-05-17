@@ -29,7 +29,6 @@ header{
     background: rgba(240, 237, 228, 0.25);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border-radius: 0 0 20px 20px;
 }
 .logo{
     color: var(--birincil-renk);
@@ -117,11 +116,13 @@ header{
     display: none;
     height: auto;
     width: 100%;
-    background-color: var(--arka-plan-rengi);
+    background: rgba(223, 217, 204, 0.25);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     position: fixed;
     top: 8rem;
     left: 0;
-    z-index: 9998;
+    z-index: 999;
     border-radius: 0 0 10px 10px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.15);
     flex-direction: column;
@@ -776,6 +777,9 @@ footer p{
     }
 }
 @media (max-width: 642px){
+    .co2goster{
+    display: none;
+}
     /* Header */
     .menubtn{
         display: block;
