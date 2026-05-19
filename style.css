@@ -15,6 +15,10 @@ html,body{
     background-color: var(--arka-plan-rengi);
     font-size: 62.5%;
 }
+img{
+    user-select: none;
+    cursor: pointer;
+}
 /*header başlangıç*/
 header{
     height: 8rem;
@@ -30,10 +34,11 @@ header{
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
 }
-.logo{
+.logo a{
     color: var(--birincil-renk);
     font-size: 3rem;
     font-weight: 700;
+    text-decoration: none
 }
 .headerul{
     display: flex;
@@ -60,6 +65,8 @@ header{
     font-size: 2rem;
     font-weight: 600;
     right: 7rem;
+    user-select: none;
+    cursor: default;
 }
 .co2goster span{
     color: var(--üçüncül-renk);
@@ -949,6 +956,18 @@ footer p{
         font-size: 1.6rem;
     }
 }
+/*scrol başlangıç*/
+::-webkit-scrollbar{
+    width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--üçüncül-renk);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+/*scrol bitiş*/
 @media (max-width: 480px){
     html, body{
         font-size: 60%;
