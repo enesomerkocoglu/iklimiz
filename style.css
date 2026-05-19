@@ -34,11 +34,11 @@ header{
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
 }
-.logo a{
+.logo .a{
     color: var(--birincil-renk);
     font-size: 3rem;
     font-weight: 700;
-    
+    text-decoration: none;
 }
 .headerul{
     display: flex;
