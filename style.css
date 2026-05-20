@@ -668,6 +668,19 @@ footer p{
     height: auto;
     margin-right: 2rem;
 }
+::-webkit-scrollbar{
+    width: 3px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border-radius: 0px;
+}
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+::-webkit-scrollbar-thumb:hover {
+  background:var(--birincil-renk);
+}
 /*footer bitiş*/
 /*media etiketleri başlangıç*/
 @media (max-width: 1380px){
@@ -956,18 +969,6 @@ footer p{
         font-size: 1.6rem;
     }
 }
-/*scrol başlangıç*/
-::-webkit-scrollbar{
-    width: 8px;
-}
-::-webkit-scrollbar-thumb {
-  background-color: var(--üçüncül-renk);
-  border-radius: 10px;
-}
-::-webkit-scrollbar-track {
-  background-color: transparent;
-}
-/*scrol bitiş*/
 @media (max-width: 480px){
     html, body{
         font-size: 60%;
